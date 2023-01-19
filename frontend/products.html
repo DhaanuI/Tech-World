@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech World - Laptops, Desktops and Much more</title>
+    <title>Tech World - All Products</title>
+
     <style>
         body {
             margin: 0px;
@@ -39,7 +40,9 @@
             margin-right: -6px
         }
 
-        #top {
+        #top,
+        #top1,
+        #intel {
             display: flex
         }
 
@@ -61,99 +64,9 @@
             margin-right: 40px
         }
 
-        #hide {
-            display: none;
-        }
-
-        #icons {
-            display: flex;
-            border: 1px solid rgb(214, 209, 209);
-            background-color: rgb(249, 249, 249);
-            justify-content: space-around;
-            padding-top: 20px;
-            margin: auto;
-            margin-top: 20px;
-            width: 100%
-        }
-
-        #icons>div {
-            margin: auto;
-
-            display: flex;
-            text-align: center;
-        }
-
-        #icons>div>div {
-            margin-right: 50px
-        }
-
-        #icons img {
-            width: 40px;
-            height: 30px;
-        }
-
-        #offer {
-            display: flex
-        }
-
-        #offer>div {
-            width: 50%;
-            padding-left: 20px;
-            padding-top: 60px;
-            height: 350px;
-            margin: auto;
-            margin-left: 50px
-        }
-
-        #offerimage>img {
-            width: 100%;
-            height: 100%;
-        }
-
-        #explore,
-        #first {
-            display: flex;
-            margin-left: 40px
-        }
-
-        #explore img {
-            width: 90%
-        }
-
-        #first img {
-            width: 80%
-        }
-
-        #exp>h2 {
-            margin-left: 40px
-        }
-
-        #firstsecdiv {
-            text-align: center;
-            margin: auto;
-
-        }
-
-        #shopnow {
-            width: 100px;
-            height: 50px;
-            background-color: black;
-            color: white;
-            margin-right: 10px;
-            font-size: 15px;
-        }
-
-        #shopdeals {
-            width: 100px;
-            height: 50px;
-            background-color: white;
-            color: rgb(107, 99, 99);
-            border: 1px solid black;
-            font-size: 15px;
-        }
-
-        #side {
-            margin-left: 50px
+        a {
+            text-decoration: none;
+            color: blue
         }
 
         #footer {
@@ -186,37 +99,86 @@
         #foot2 p {
             margin-right: 50px
         }
-        #first22{
-            display:flex;
-            margin-left: 40px;
-      
+
+        #foot3 p {
+            margin-left: 30px
         }
-        #first22 img{
-            width:40px;
-            height:40px;
-            margin-bottom:-30px
+
+        #top1 {
+            display: flex;
+            margin: auto;
+            width: 100%;
+            background-image: linear-gradient(rgb(212, 211, 216), white, rgb(212, 211, 216));
+
+            /* border:1px solid black; */
+
         }
-        #first22 p,
-        #first22 a{
-           margin-top:-10px;
-           margin-left:50px
+
+        #intel1 {
+            /* margin-left:400px; */
+            padding: 30px;
+            /* border:1px solid black; */
+            width: 50%
         }
-        #first221{
-            margin-left:200px;
-            margin-top:90px;
-            text-align: center;
-            font-size: 25px;
-            margin-right:80px
+
+        #lap {
+            margin-left: 100px;
+            /* border:1px solid black; */
+            width: 50%
         }
-        a{
-            text-decoration: none;
-            color:blue
+
+        #filter,
+        #render {
+            margin-left: 20px
+        }
+
+        #main,
+        #first {
+            display: flex;
+        }
+
+        #one {
+            width: 250px
+        }
+
+        #common {
+            width: 450px
+        }
+
+        #filter {
+            width: 20%;
+            border: 1px solid black;
+        }
+
+        #render {
+            width: 78%;
+            border: 1px solid black;
+            padding: 30px
+        }
+
+        select {
+            width: 250px;
+            height: 30px;
+            margin-bottom: 10px
+        }
+
+        button {
+            width: 220px;
+            height: 40px;
+            margin-bottom: 10px
+        }
+        #but button{
+            border-radius:50%;
+            width:50px;
+            margin-right:10px
+        }
+        #but{
+            display: flex;
         }
     </style>
 </head>
 
 <body>
-
     <div id="top">
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAAJcEhZcwAADsQAAA7EAZUrDhsAAARwaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49J++7vycgaWQ9J1c1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCc/Pgo8eDp4bXBtZXRhIHhtbG5zOng9J2Fkb2JlOm5zOm1ldGEvJz4KPHJkZjpSREYgeG1sbnM6cmRmPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjJz4KCiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0nJwogIHhtbG5zOkF0dHJpYj0naHR0cDovL25zLmF0dHJpYnV0aW9uLmNvbS9hZHMvMS4wLyc+CiAgPEF0dHJpYjpBZHM+CiAgIDxyZGY6U2VxPgogICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSdSZXNvdXJjZSc+CiAgICAgPEF0dHJpYjpDcmVhdGVkPjIwMjMtMDEtMTg8L0F0dHJpYjpDcmVhdGVkPgogICAgIDxBdHRyaWI6RXh0SWQ+ZjMwZmQxNGQtMDkyMy00Y2JiLThlY2EtYTc4MGQ4YzZmYmQ5PC9BdHRyaWI6RXh0SWQ+CiAgICAgPEF0dHJpYjpGYklkPjUyNTI2NTkxNDE3OTU4MDwvQXR0cmliOkZiSWQ+CiAgICAgPEF0dHJpYjpUb3VjaFR5cGU+MjwvQXR0cmliOlRvdWNoVHlwZT4KICAgIDwvcmRmOmxpPgogICA8L3JkZjpTZXE+CiAgPC9BdHRyaWI6QWRzPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpkYz0naHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8nPgogIDxkYzp0aXRsZT4KICAgPHJkZjpBbHQ+CiAgICA8cmRmOmxpIHhtbDpsYW5nPSd4LWRlZmF1bHQnPlRlY2ggd29ybGQgLSAxPC9yZGY6bGk+CiAgIDwvcmRmOkFsdD4KICA8L2RjOnRpdGxlPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczpwZGY9J2h0dHA6Ly9ucy5hZG9iZS5jb20vcGRmLzEuMy8nPgogIDxwZGY6QXV0aG9yPkRoYWFudSBNYWxhdmFuPC9wZGY6QXV0aG9yPgogPC9yZGY6RGVzY3JpcHRpb24+CgogPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9JycKICB4bWxuczp4bXA9J2h0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8nPgogIDx4bXA6Q3JlYXRvclRvb2w+Q2FudmE8L3htcDpDcmVhdG9yVG9vbD4KIDwvcmRmOkRlc2NyaXB0aW9uPgo8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSdyJz8+Zaa8GQAAGpdJREFUeJzt3XmMVfXdwOEvwypCKKIIVOqCCopLFRsRMdpUcQVZtJpgte62/iE2pFprpaFuL9XYak1qW8ViNWplqVLjHg2LiijuoggIFiWAG9YKwsx9/zBMHJi7zIIDX54nuQlzzzm/82Mg85lz7r3ntCoUCoUAALZqVS09AQCg6QQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgATatPQEtiZTp06NkSNHtvQ0ALYJy5Yti169erX0NLYajtABIAFBB4AEnHJvpKlTp8bw4cNbehoAqYwcOTKmTp3a0tPYKjlCB4AEBB0AEhB0AEhA0AEgAUEHgAS8y72ZrV+/Ptq2bdvS04BagwYNilmzZrX0NIDNzBE6ACQg6ACQgKADQAKCDgAJCDoAJCDoAJCAoANAAoIOAAkIOgAkIOgAkICgA0ACgg4ACQg6ACQg6ACQgKADQAKCDgAJCDoAJCDoAJCAoANAAoIOAAkIOgAkIOgAkICgA0ACbVp6AjRep06dom/fvs065hdffBHz588vuny77baLfffdt9Hjf/755/HOO+80evuIiNatW8fAgQPjsMMOix49ekTPnj2jUCjERx99FIsXL45Zs2bFvHnzYv369U3aT/fu3aN3794REbF27dp4/fXXGzzGxv9G8+bNi5qamibNa3MrFAoxZ86ckusceuihZcd5/vnniy7r169fdOnSpeT2ixYtipUrVxZdvtdee8UOO+xQdh4RER988EE88cQTMW/evFi5cmWsWLEiqqurY+edd47u3btH//79Y8iQIbHrrrtWNN43vfXWW7F69eqK12/btm1069YtunfvHtttt12z7atDhw5x4IEHNmi8SsbdWOvWrWPHHXeMHXfcMTp16tSo/bGZFKjYlClTChFRiIjC1KlT611n3bp1tets7sfhhx/e7H/HZ599tuQ+DzzwwCaN//jjjzf679u7d+/CbbfdVvjoo4/K7mfFihWF66+/vtC7d+9G7++SSy6pHW/BggWNGuPII4+sM6/tt9/+W/v/seExaNCgBv877bvvviXHfO2110pu/9JLL5Xc/uqrry47h4MOOqjkGIsWLSq5/bp16woTJ04sHHDAARV/r/r27Vu49dZbC2vWrKn4e3X00Uc36t+lqqqqcNBBBxXGjh1bWLhwYZP31a9fv4rn3Fx/hy5duhSGDh1auOmmmwqLFy9u9P6/acSIEbXjL1u2rFnG3FY45c4Wr23btnH99dfHggUL4oILLqjoqGynnXaKyy67LObPnx+XX355tGnjZFRDjBo1quTyadOmlVz+z3/+s+TyyZMnl1y+ZMmSmDdvXtHlBx98cOy+++5Fl//73/+Ovn37xtlnnx2vvvpqyX1909tvvx0XX3xx9OnTJ+67776Kt2uMmpqamDdvXtxwww2x9957x4UXXhj/+9//Nus+m9tnn30WDz30UFx66aWx5557xhlnnBFvvPFGS09rm+Wn3Fasuro6Pv3005LrtGvXLjp27BgREYVCIT777LOS6//3v/9t0Bzee++9Bp3a/uCDDxo0/g477BCTJ0+Oo446apNlq1atijfeeCOWL18ebdq0iT59+kSfPn2ic+fOtet07NgxrrvuuvjhD38Yp556aoNOjW7LRo4cGb/73e+KLp82bVpceeWVRZc/8MADJcefN29eLFq0KPbYY4+i45ebX31qampi3Lhxcc0110ShUCg5RinLli2L008/PWbNmhU33nhjtG3bttFjVaK6ujr+8pe/xOzZs+Ppp5+Obt26bdb9bQ7V1dVx9913x/333x8TJkyIMWPGtPSUtj0tfYpga7KlnXKv5DF69OjauX3yySdNHm/jU+7f/e53N9vcO3XqtMmp3erq6sKkSZMKAwcOLFRVVdW73Q9+8IPCvffeW1i/fn2dbV944YXCdtttV/H+t+VT7oVCobD77ruXHHfJkiX1bjdv3ryK5jVhwoSi+z7yyCNLbvvmm2/Wu915553X7N+/kSNHFmpqaorOtbGnq4s9Bg8evMn/3Ur21RKn3Es9TjvttEJ1dXWD5+KUe+M55c4W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fQPZjjvuWNE7uVu3bl3yOvIbO+GEE+KPf/xjsx8Njh8/vtleA27VqlVcddVVJde55ZZbYunSpc2yv5ZSVVUV119/fVxwwQUtPZVtiqDTJG+88UZ8+umnDXp884i5lJqamjjllFPi5ptvrvP8fvvtF3/6059i8eLFsXr16liwYEG899578eWXX8b8+fPjtttu2+R2jnfccUecdNJJW80drLZklRw1H3PMMSU/nVDJu92POuqoknd6q8/FF18c06ZNa5ZPRnTs2DEmTZoUv/nNb5o81jeVO0pfs2ZNs+/z29SzZ8944oknyl6rnuYn6GzRqqur45JLLonTTjutzufTN+jcuXPsueeeseuuu9Z75L906dI4+eST49xzz634JjKUVu4GOxHlXyev70YrG2vMx+Qivn4n/YsvvhijRo1q9NH68ccfH3PmzImf/OQnjdq+lEpeS//HP/4RL7/8crPve3PaZZdd4qabbooFCxbED3/4w5aezjZJ0Nkq3H///dGvX7+48MIL46mnnir5ppyvvvoqnn766Rg9enTstddetbf3pHnstttucfDBBxddXu6WqxFfn7ofPHhw0eWtWrVq1KV2N+jTp0888MAD8eqrr8b5559f502RpeZ05plnxpw5c+Lhhx+O/v37N3r/5YwaNarkzUxqamq22CPc1q1bR/fu3WPfffeNY445JsaPHx8zZsyIxYsXx5gxY2L77bdv6Slus1oVCiXuPUgdU6dOrT1qmDp1ar0/cNavX9/gz9nScF26dIkBAwZEjx49okePHlEoFGLVqlWxZMmSeOGFFxp1U46sBg0aVPZOZtuC+fPnx8svvxwrVqyIFStWRE1NTXTv3j26d+8e++23XxxwwAEtPUXi6zMzG27DumzZsujVq1cLz2jr4VrubJU+++yzeOqpp1p6GmxF+vXrF/369WvpacBm45Q7ACQg6ACQgKADQAKCDgAJCDoAJCDoAJCAoANAAoIOAAkIOgAkIOgAkICgA0ACgg4ACQg6ACQg6ACQgKADQAKCDgAJCDoAJCDoAJCAoANAAoIOAAkIOgAkIOgAkICgA0ACgg4ACQg6ACTQpqUnkE2bNm2iUCi09DQA2MY4QgeABAQdABIQdABIQNABIAFBB4AEvMu9kUaMGNHSUwCAWo7QASABQQeABFoVXAUFALZ6jtABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASABQQeABAQdABIQdABIQNABIAFBB4AEBB0AEhB0AEhA0AEgAUEHgAQEHQASEHQASEDQASCB/wcNdXg6famwbwAAAABJRU5ErkJggg=="
             id="logo" alt="" />
@@ -256,323 +218,356 @@
         <p>About Us</p>
     </div>
 
-    <div id="icons">
-        <div>
-            <div>
+    <div id="top1">
+        <div id="lap">
+            <p style="font-size:50px">Laptop Computers & 2-in-1 PCs</p>
+
+            <p>Shop the best laptops & notebooks from Dell. See top laptop deals today.</p>
+        </div>
+        <div id="intel1">
+            <div id="intel">
                 <div>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAAB5CAMAAAAqJH57AAAAWlBMVEX///8AAAD29vbb29tvb29QUFD5+flcXFyrq6uoqKiampq6uro+Pj7u7u5HR0d7e3t1dXXm5ubJyckVFRUPDw9VVVUwMDCNjY2xsbHAwMBiYmI5OTkjIyMqKiqeAKgkAAABeElEQVRoge3aXZNDMBiG4Qjio9S3Vq3//zc3Ydl2CTXrjYM+91l60GvQjM7kZQwhhBBCaKHYpi9ecG2ntuirHfsvfDPADt1e4dQYbFnJM+z3H7kOdW7v3H9hXsp1lR3yO10vU3bJp/VdLiNhAJYXGb1ctHrKjRGYsYu00mn1kKvhDgjKeiGW1mOSvVEOXcpCRXBpeTM5J95PuVYOiOVAK/vEsr8qB4JTJIJt+X+bRhtkyJAhQ4YMGTJkyJAhQ4YMGTJkyJAhQ4YM+VjZJ5L9TTlpLhQ1yaZMmV4+77wqI5YzrcyykLL+gFsjG+jDZcG5kmOS48h56uTb41zQnznryll5klywk2DLUnKxZ1hAd4/KPV9S/MhXvmNAotLI1Y7v4NdR3jPEYrfRUu1sBmolMcrtvr2snxV5N97Kp8PUIA/VvwFd6p1YDW/GinxK6qlU3Wv1xvw6cKe8Xycv3T6D7vo3Zpx0ht06GScRTUw9bk1AIoQQQuij+wZoHjLxNDzxjgAAAABJRU5ErkJggg=="
-                        alt="lap">
+                    <img style="margin-top:20px;"
+                        src="https://i.dell.com/is/svg/brand-assets/3rd-party-logos/microsoft/windows-11/windows-11-mda-banner-en-us.svg"
+                        alt="">
                 </div>
                 <div>
-                    <p>Laptops</p>
+                    <p>Intel® Core™ Processor </p>
+                    <a href="https://www.dell.com/en-in/lp/shop/latest-intel-processors">Learn More about Intel</a>
+                </div>
+                <div>
+                    <img src="https://i.dell.com/sites/csimages/DellMicroContent_Images/all/family-core-i5i7i3-60h.png"
+                        alt="">
+                </div>
+            </div>
+            <div>
+                <img style="margin-left:200px;" width="30%"
+                    src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/republic-day-cons-dell-inspiron-5420nt-uhp-2304-12-homepage-module-rf-1023x842-lr.png?fmt=png-alpha&wid=1023&hei=842"
+                    alt="lap">
+            </div>
+        </div>
+    </div>
 
-                    <div id="hide">
-                        <a href="">For Home</a>
-                        <a href="">For Business</a>
+
+    <div id="main">
+        <div id="filter">
+            <div>
+                <p>Filer Results</p>
+            </div>
+            <div>
+                <p>Refine by</p>
+                <input type="checkbox">
+                <label for="">For Home</label><br>
+                <input type="checkbox">
+                <label for="">For Business</label>
+            </div>
+            <div>
+                <p>Product Line</p>
+                <input type="checkbox">
+                <label for="">Inspiron</label><br>
+                <input type="checkbox">
+                <label for="">Vostro</label><br>
+                <input type="checkbox">
+                <label for="">XPS</label>
+            </div>
+            <div>
+                <p>Screen Size</p>
+                <input type="checkbox">
+                <label for="">43.18 cm (17 inch)</label><br>
+                <input type="checkbox">
+                <label for="">40.60 cm (16 inch)</label><br>
+                <input type="checkbox">
+                <label for="">38.10 cm (15 inch)</label><br>
+                <input type="checkbox">
+                <label for="">35.56 cm (14 inch) </label><br>
+                <input type="checkbox">
+                <label for="">33.02 cm (13 inch)</label>
+            </div>
+            <div>
+                <p>Processor</p>
+                <input type="checkbox">
+                <label for="">All</label><br>
+                <input type="checkbox">
+                <label for="">Intel</label><br>
+                <input type="checkbox">
+                <label for="">AMD</label>
+            </div>
+            <div>
+                <p>Price</p>
+                <input type="checkbox">
+                <label for="">30000 to 40000</label><br>
+                <input type="checkbox">
+                <label for="">40001 to 60000</label><br>
+                <input type="checkbox">
+                <label for="">60001 to 100000</label><br>
+                <input type="checkbox">
+                <label for="">Above 100001</label>
+            </div>
+            <div>
+                <p>Memory</p>
+                <input type="checkbox">
+                <label for="">32GB or more</label><br>
+                <input type="checkbox">
+                <label for="">16GB</label><br>
+                <input type="checkbox">
+                <label for="">8GB</label>
+
+            </div>
+            <div>
+                <p>OS</p>
+                <input type="checkbox">
+                <label for="">Windows 11 Home</label>
+            </div>
+
+        </div>
+        <div id="render">
+            <div id="first">
+                <div>
+                    <img id="common"
+                        src="https://i.dell.com/sites/csimages/Banner_Imagery/all/in-dhs-inspiron-laptops-tile-right-facing.png"
+                        alt="">
+                </div>
+                <div>
+                    <p style="font-size:40px;color:blue">Inspiron Laptops & 2-in-1 PCs</p>
+                    <h4>Versatile Performance Starting at ₹ 33,990.02</h4>
+                    <p>Create, consume and connect in style with versatile laptops and 2-in-1s.</p>
+
+                    <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop Inspiron</button> <button style="background-color:white;color:blue;border:1px solid blue">Explore Inspiron</button>
+
+                </div>
+            </div>
+            <div>
+                <p style="font-size:40px;color:rgb(109, 109, 235)">Which Laptop is right for you</p>
+
+                <div id="first">
+                    <div>
+                        <select name="" id="laptops">
+                            <option value="Inspiron">Inspiron</option>
+                            <option value="Alienware">Alienware</option>
+                            <option value="G Series">G Series</option>
+                        </select>
+                        <br>
+                        <img id="one"
+                            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/pt-br/other/in5320nt-cnb-05000ff090-gy-fpr-cat-compare.png?$S7-png$&wid=800&hei=550&qlt=100,0&resMode=sharp2"
+                            alt="">
+
+                        <h4>Versatile Performance</h4>
+                        <p>Starting at ₹ 33,990.02 </p>
+
+                        <ul>
+                            <li>
+                                Perform personal & home office tasks
+                            </li>
+                            <li>
+                                Stream, browse and multitask
+                            </li>
+                            <li>
+                                Video chat with enhanced audio & visuals
+                            </li>
+                            <li>
+                                Create social content
+                            </li>
+                        </ul>
+                        <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop Inspiron</button><br>
+                        <button style="background-color:white;color:blue;border:1px solid blue">Explore Inspiron</button>
+
+                    </div>
+                    <div>
+                        <select name="" id="laptops">
+                            <option value="Vostro">Vostro</option>
+                            <option value="Alienware">Alienware</option>
+                            <option value="G Series">G Series</option>
+                        </select>
+                        <br>
+                        <img id="one"
+                            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/category-pages/latam/dv7620nt-cnb-05000ff090-nonfpr-bk.png?$S7-png$&wid=800&hei=550&qlt=100,0&resMode=sharp2"
+                            alt="">
+
+                        <h4>Small Business Productivity</h4>
+                        <p>Starting at ₹ 41,989.99 </p>
+
+                        <ul>
+                            <li>
+                                Protect data with essential security
+                            </li>
+                            <li>
+                                Power business applications
+                            </li>
+                            <li>
+                                Collaborate with video conferencing
+                            </li>
+                        </ul>
+                        <br>
+                        <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop Vostro</button><br>
+                        <button style="background-color:white;color:blue;border:1px solid blue">Explore Vostro</button>
+
                     </div>
 
-                </div>
-            </div>
+                    <div>
+                        <select name="" id="laptops">
+                            <option value="XPS">XPS</option>
+                            <option value="Alienware">Alienware</option>
+                            <option value="G Series">G Series</option>
+                        </select>
+                        <br>
+                        <img id="one"
+                            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/franchise/xps/prod-2011-tablet-xps-13-9315-blue-folio-800x550.png?fmt=png-alpha&wid=800&hei=550"
+                            alt="">
 
-            <div>
-                <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRIYIY2nUmW4DW55eL1cfZVX-jDvYn_wFZUQ&usqp=CAU"
-                        alt="desktop">
-                </div>
-                <div>
-                    <p>Desktops</p>
+                        <h4>Creators and Creativity</h4>
+                        <p>Starting at ₹ 1,04,989.97</p>
 
-                    <div id="hide">
-                        <a href="">For Home</a>
-                        <a href="">For Business</a>
+                        <ul>
+                            <li>
+                                Multitask between intensive programs
+                            </li>
+                            <li>
+                                Produce video, photography and music
+                            </li>
+                            <li>
+                                Create & edit digital content
+                            </li>
+                            <li>
+                                Be productive anywhere
+                            </li>
+                        </ul>
+
+                        <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop XPS</button> <br>
+                        <button style="background-color:white;color:blue;border:1px solid blue">Explore XPS</button>
+
                     </div>
+                </div>
+
+            </div>
+
+            <div id="first">
+                <div>
+                    <p>Vostro Laptop</p>
+                    <h4>Small Business Productivity Starting at ₹ 41,989.99</h4>
+
+                    <p>Power your small business with laptops built to deliver security, performance and enhanced video
+                        conferencing.</p>
+
+                    <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop Vostro</button> <button>Explore Vostro</button>
+
 
                 </div>
+                <div>
+                    <img id="common"
+                        src="https://i.dell.com/sites/csimages/Banner_Imagery/all/in-dhs-vostro-laptops-tile-left-facing.png"
+                        alt="">
+                </div>
             </div>
+
+            <div id="first">
+
+                <div>
+                    <img id="common"
+                        src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/category/laptop/prod-2024-notebook-xps-13-9320-nt-13-9315-nt-tablet-13-9315-2-in-1-800x620-v2.png?fmt=png-alpha&wid=800&hei=620"
+                        alt="">
+                </div>
+
+                <div>
+                    <p>XPS Laptops & 2-in-1 PCs</p>
+                    <h4>Creators & Creativity Starting at ₹ 1,04,989.97</h4>
+
+                    <p>Power your creativity with premium, high-performing and beautifully-crafted laptops with
+                        innovative features.</p>
+
+                    <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop XPS</button> <button style="background-color:white;color:blue;border:1px solid blue">Explore XPS</button>
+                </div>
+
+            </div>
+
+            <div id="first">
+
+
+
+                <div>
+                    <p>Alienware Gaming Laptops</p>
+                    <h4>Immersive Gaming Experiences Starting at ₹ 1,59,989.99</h4>
+
+                    <p>Power your creativity with premium, high-performing and beautifully-crafted laptops with
+                        innovative features.</p>
+
+                    <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop Alienware</button> <button style="background-color:white;color:blue;border:1px solid blue">Explore Alienware</button>
+                </div>
+
+                <div>
+                    <img id="common"
+                        src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/category/laptop/prod-2024-notebook-xps-13-9320-nt-13-9315-nt-tablet-13-9315-2-in-1-800x620-v2.png?fmt=png-alpha&wid=800&hei=620"
+                        alt="">
+                </div>
+
+            </div>
+
+            <div id="first">
+                <div>
+                    <img id="common"
+                        src="https://i.dell.com/sites/csimages/Banner_Imagery/all/in-dhs-g-series-laptops-tile-right-facing.png"
+                        alt="">
+                </div>
+                <div>
+                    <p>G Series Gaming Laptops</p>
+                    <h4>Immersive Gaming Experiences Starting at ₹ 1,59,989.99</h4>
+
+                    <p>Power your creativity with premium, high-performing and beautifully-crafted laptops with
+                        innovative features.</p>
+
+                    <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop G Series</button> <button style="background-color:white;color:blue;border:1px solid blue">Explore G Series</button>
+                </div>
+
+
+
+            </div>
+
+            <div id="first">
+                <div>
+                    <p>Laptop Deals</p>
+                    <h4>Our best-priced laptop computers</h4>
+
+                    <p>Take advantage of limited-time savings on select laptops. Shop our exclusive deals and get the
+                        best for less.</p>
+
+                    <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop Deals</button>
+
+                </div>
+                <div>
+                    <img id="common"
+                        src="https://i.dell.com/sites/csimages/Banner_Imagery/all/in-dhs-laptop-deals-left-facing.png"
+                        alt="">
+                </div>
+            </div>
+
+            <div id="first">
+                <div>
+                    <img id="common"
+                        src="https://i.dell.com/sites/csimages/Banner_Imagery/all/in5420ntcnb00055rf110gyfpr2.png"
+                        alt="">
+                </div>
+                <div>
+                    <p>Student Laptop Deals</p>
+                    <h4>Student Special</h4>
+
+                    <p>Take advantage of limited-time savings on select laptops. Shop our exclusive deals and get the
+                        best for less.</p>
+
+                    <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop Student Deals</button>
+
+                </div>
+
+            </div>
+
 
             <div>
-                <div>
-                    <img src="data:image/png;base64,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"
-                        alt="Alienware">
-                </div>
-                <div>
-                    <p>Alienware</p>
-
-                    <div id="hide">
-                        <a href="">For Home</a>
-                        <a href="">For Business</a>
-                    </div>
+                <p>How easy is it to find what you are looking for?</p>
+                <div id="but">
+                    <p>Very Difficult</p> <button>1</button> <button>2</button> <button>3</button> <button>4</button>
+                    <button>5</button> <button>6</button> <button>7</button>
+                    <p>Very Easy</p>
 
                 </div>
             </div>
-
-            <div>
-                <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmAGZvZL6Y0_4thSFoKLInyNmGLkAQOQG7Kg&usqp=CAU"
-                        alt="Work_Stations">
-                </div>
-                <div>
-                    <p>Work Stations</p>
-
-                    <div id="hide">
-                        <a href="">For Home</a>
-                        <a href="">For Business</a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPQAAADPCAMAAAD1TAyiAAAAeFBMVEX///8AAACKiopcXFywsLC2trZtbW0PDw8tLS00NDQhISHe3t48PDxDQ0N0dHRLS0thYWFSUlJ8fHyRkZFzc3NoaGicnJyEhISnp6cSEhKgoKAICAgoKCi8vLz4+PjJyckdHR3T09Po6Og/Pz/Dw8Px8fHl5eXX19dCnap0AAADgElEQVR4nO3dbVeqQBSG4VHQUpE3QUkls7T+/z884sBEpsepFbMXez93H/iCzVxrFSiDqtSpmV8sF6s0DcMsy/I8jmPPS5IkiqL5uaBq0u7xVpP/FtxofqXoe8mVvO/FV8p18VLVhQNBRdqcUM/DbdPKPKSehesCpY7Uc3DfSi2pp0CQ8qhnQJCK9HYz8tk3ihr0m94+KQGNG3Sgtw/UE3KRQU8koh+B5p1Bb4HmnUFPgeYd0OLQL0DzDmhx6CegeQe0OPQD0Lwz6A3QvAMaaMYBDTTjgAaacUADzTjZ6AHQvAMaaMYBDTTjgAaacUADzTiggWYc0OLQIq+RAc08oIFmHNBAMw5ooBkn+9ZnoJkHNNCMAxpoxsl+Bx7QzAMaaMbJRov8IAigmQc00IyTjRb5eWRAMw9ooBkn+xNigWYe0EAzTvYnuQPNPKDFoUV++QjQzAMaaMbJRov8kjCgmQc00Iwz6DegeScbPQeadwYdAc07oMWhE70V8aXb2QV6sxiybxFcoEUlE+1Rz4Ag0eiHcsS+MmrQsd5SnLKenx0POL5AO39ysq4uuE9mTsc06JwGXb+4G+xcDmrQYxJ0bg4qe4ejGnRGgf5oHUod/mPTosMW2nc3LC162kIv3A1Li9620Gt3wxp0SIGOW+jS3bC0aJ/4QJaSnLI+zanDUQ16RYKeNebA5agGPSRBq2Ps+tCt6NGnZvt3xyMa9IIM7T6DXuutrKuhzdkj9tgXN8+J1GggL7UnngBF6pl6Bu47KFVSz8F1w+qY5t/fj1P1897d9P6ubCrMCez4OtvvDqW+9u37RbFer5e6RVW9Arb6LP1a+LXs/BM2ryC9sWX1/pvM/IovXQyatuZjFulOVbOupn5CFIXv62ve5WG3n70eu38y8F4jPmwfUO8/7XJSXde8lrK+4gl0TwPaJqB7WoO2XrACuqcBbRPQPQ1om4DuaUDbxAl9sH0A0D2tQVvfbAB0T2vQI9sHAN3TGrT1/XFA9zTR6OL+rjqge5potPU9r0D3tHcJf96vpV/UK9rn6pttB9soShLP8/L4vAqdnTKrzXpxeaWXluv9n8xvqBaaC3/n+r1MP+jz3Sh/nvXfiuvS+3P/fdYvyR3XpXngUeuud+wUnVDzbtQp2uHbW35Ul3eZbqlxN/sohmmY5bGXRNF8/hYEwaTd46/bBn97zvoHZmJmN4EjgCgAAAAASUVORK5CYII="
-                        alt="Monitor">
-                </div>
-                <div>
-                    <p>Monitors & Accessories</p>
-
-                    <div id="hide">
-                        <a href="">For Home</a>
-                        <a href="">For Business</a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEX///8AAAC+vr6Ojo6tra3V1dXr6+uJiYmhoaE9PT3MzMzl5eWenp5+fn44ODj5+fnd3d1gYGBISEjBwcG1tbVVVVXx8fF2dnbPz88tLS1bW1uVlZVnZ2c0NDQWFhZxcXEhISEMDAxMTEwaGhojIyOmxNXiAAAD2klEQVR4nO2da1fiMBBAAXkor6IoD1lAVv//b1w5e6TDWTftTKSZwL0fc07DXItNGmaSVgsAAAAAAAAAAMALvU7XJ53VT+g9P7Y98/oc6Td8SK1QyXQeI7hJHX4tBnbBZerYa/LLKjhOHXlt7myCvdRxKxiaDJ9Sh61gaxHspI5ahWXQ2KcOWsWrwTB1zEoKteBMXH24u/fI5k3E2FMbDqP+Pg3xXsaon9nMy4snF4jtZxiUQXbUF4tHqXE8bYA7DENg6AIMg2DoAgyDYOgCDIPcsuFzWzA9Nb/I5nH9D5KvaXWQLzpNGD6dms/Wxu8xxBBDDDHEEEMMMfRk+J956SZrw2Ik6J+a+7J5Uf+DzrqrgbyWt6cgGLoAwyAYugDDIBi6AMMg15+pILNNFLPMZtmVMeqzTc6m/JOBS4SgIWPo+rO+biBzb1jdrSP0D5pPfqeOWsGDRfAGsqAzymRXLAudM6ju2wVLq2AudzFqVpnDAzWq8mm2Th1+DXYRFWzz6u5dYL6L+QwXxsFisavu2gv9ap1vyKVy7Yipek37i0laDC9PcoUgAyzrEG/V3TrioBccyeu3Dx6ZyhBnasOVuDqqlviCyBmXfsAQo725zPbiiMc966X/gqELMAyCoQswDIKhCzAMgqELLmS4Wk5KyvX0sWhdKt5G+hMV+6bzS8sffV5lM3VPGGKIIYYYYoghhq4Mr3LWNtuMS7qluGgdK35a749VnKXO8PYUBEMXYBgEQxdgGARDF2AYRBhG7Hl+YX6q7sm0lXQjiHICfUaMTL3cr3oeWU1EjPo02qKdF4b8y5wKSuTuFfXppg5ahWJR4URxSB21BtOG3DndRMWqicT3CTOSF5tgq5hW9+2CtbmMt8jjiItpTJ1yDsnecaXmOVSvLSMONlj4P+3pyNpWT/JJkUNd15F36z/iS3XfTniqlvmOqx/x83q5sHxPc7qFtpuYx2j/xVovuEgdsxL9iCFXMZazvkdGcj4SVRVk25KhCcR4pl+Juqn1UgzTgWEQDF2AYRAMXYBhEAxdcCHD/lBQ7rjRk82jVm2KoY4GDDkN6cgV5QhjiCGGGGKIIYY3bJj3rG2+np7YPp6al9uyed1t1WYmuqvBewOGjsAwCIYuwDAIhi7AMAiGLsAwiMjFsJxw0gz7GEOZTxO1N/8Fkbvi6/Np+u280O+U3PpIHbOKnV4wiyT2Eks6+6i6W0cYvqR55Ol/YTtpZpHPvvM7Y7Z+PqcjmM9hWVX37YKIXfFHOdR2fZieMl8U94fUAlWMI4qC/jrOJ35LZz72nVg/AAAAAAAAAAAAqMkfLOGCexBGyIYAAAAASUVORK5CYII="
-                        alt="Servers">
-                </div>
-                <div>
-                    <p>Servers & Storage</p>
-
-                    <div id="hide">
-                        <a href="">Servers</a>
-                        <a href="">Storage</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div id="offer">
-        <div>
-            <h2 style="color:orangered">SHOPPING DAYS</h2>
-            <h1>Time for Smart Savings</h1>
-            <p>Get 10% cashback up to ₹5000 on Citi Cards.*</p>
-
-            <button id="shopnow">Shop Now</button> <button id="shopdeals">Shop Deals</button>
-        </div>
-
-        <div id="offerimage">
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/show-workstations-sb-dell-precision-7770nt-uhp-2304-09-in-homepage-module-rf-1023x842-lr.png?fmt=png-alpha&wid=1023&hei=842"
-                alt="lap">
-        </div>
-    </div>
-
-    <div id="exp">
-        <h2>Explore Tech World</h2>
-        <div id="explore">
-            <div>
-                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0105-poweredge-0105-poweredge-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain"
-                    alt="">
-                <h3>PowerEdge.Next Sign Up to learn more</h3>
-            </div>
-            <div>
-                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/1201-apex-hp-tile-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain"
-                    alt="">
-                <h3>Explore Tech World APEX</h3>
-            </div>
-            <div>
-                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/0105-powerstore-continuously-modern-703x423.png?fmt=jpg&wid=582&hei=350&fit=constrain"
-                    alt="">
-                <h3>The Next Era of Continuously Modern Storage</h3>
-            </div>
-        </div>
-
-
-    </div>
-
-    <div id="first">
-        <div>
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/republic-day-cons-dell-inspiron-5420nt-uhp-2304-12-homepage-module-rf-1023x842-lr.png?fmt=png-alpha&wid=1023&hei=842"
-                alt="lap">
-        </div>
-
-        <div id="firstsecdiv" style="margin-left:-70px">
-            <h3>INSPIRON LAPTOPS</h3>
-            <h2>Power Your Success Story</h2>
-            <h3>Give yourself a tech edge with 10% cashback on Citi cards or instant discounts on UPI & headsets.</h3>
-            <h5>*T&C apply.</h5>
-
-            <a href="">Shop Now</a> | <a href="./products.html">Shop All</a>
-        </div>
-    </div>
-
-    <div id="first">
-
-
-        <div id="firstsecdiv">
-            <h3>LATITUDE LAPTOPS</h3>
-            <h2>Ultra-Premium. Ultra-Intelligent.</h2>
-            <h3>Laptops and 2-In-1s with Built-in AI for Unprecedented Connectivity, Collaboration & Productivity.</h3>
-            <h5>*T&C apply.</h5>
-
-            <a href="">Shop Deals</a> | <a href="">Shop All</a>
-        </div>
-
-        <div id="side">
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/show-latitude-sb-dell-latitude-5330t-uhp-2304-09-in-homepage-module-lf-1023x842-lr.png?fmt=png-alpha&wid=1023&hei=842"
-                alt="LATITUDE">
-        </div>
-    </div>
-
-    <div id="first22">
-        <div id="first221">
-            <p>Dell Support</p>
-            <p> Get your questions answered</p>
-        </div>
-
-        <div>
-            <img src="https://cdn-icons-png.flaticon.com/128/810/810350.png" alt="contact">
-         <a  style="text-decoration: none;color:blue" href=""><p>Contact Support</p></a>   
-            <p>Let us assist you with any product or service questions</p>
-           <hr>
-           <img src="https://cdns.iconmonstr.com/wp-content/releases/preview/2012/96/iconmonstr-check-mark-8.png" alt="">
-         <a style="text-decoration: none;color:blue"href=""><p>Warranty and Contracts</p></a>   
-            <p>Check warranty of the product</p>
-            <hr>
-            <img src="https://img.icons8.com/dotty/2x/communication.png" alt="">
-        <a style="text-decoration: none;color:blue"href=""><p>Product Support</p></a>    
-            <p>Expertise. Convenience. Quality Support.</p>
-            <hr>
-            <img src="https://www.svgrepo.com/show/224177/settings.svg" alt="">
-        <a style="text-decoration: none;color:blue"href=""><p>Drivers and Downloads</p></a>    
-            <p>Get the latest divers and softwares</p>
-        </div>
-
-    </div>
-
-    <div id="first">
-
-
-        <div id="firstsecdiv">
-            <h3>G SERIES LAPTOPS</h3>
-            <h2>The Joy Of Winning</h2>
-            <h3>Find exceptional savings on the latest tech. Get instant discount on UPI/Netbanking & JBL Earbuds.</h3>
-            <h5>*T&C apply.</h5>
-
-            <a href="">Start Gaming</a> | <a href="">Learn More</a>
-        </div>
-
-        <div id="side">
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/heroes/big-shopping-days-cons-dell-g-series-5525nt-uhp-2304-08-in-homepage-hero-1023x842.png?fmt=png-alpha&wid=1023&hei=842"
-                alt="SERIES">
-        </div>
-    </div>
-
-    <div id="first">
-        <div>
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/servers-storage-network-left-1023x842.png?fmt=png-alpha&wid=1023&hei=842"
-                alt="SERVERS">
-        </div>
-
-        <div id="firstsecdiv">
-            <h3>SERVERS, STORAGE, NETWORKING</h3>
-            <h2>Flexible, Scalable IT Solutions</h2>
-            <h3>Power transformation with server, storage and network solutions that adapt and scale to your business
-                needs.</h3>
-            <h5>*T&C apply.</h5>
-
-            <a href="">Explore Servers</a> | <a href="">Explore Storage</a>
-        </div>
-    </div>
-
-    <div id="first">
-
-        <div id="firstsecdiv">
-            <h3>ALIENWARE 27 GAMING MONITOR</h3>
-            <h2>Outshine Everyone</h2>
-            <h3>Built-in bragging rights with premium performance, overclockable refresh rates up to 280Hz.</h3>
-            <h5>*T&C apply.</h5>
-
-            <a href="">Shop Now</a>
-        </div>
-
-        <div id="side">
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-multiple-products/monitor/cs2303g0002-003-612559-gl-cs-co-fy23q3-site-banner-aw2723df-monitor-1023x842-left.png?fmt=png-alpha&wid=1023&hei=842"
-                alt="alien">
-        </div>
-
-    </div>
-
-    <div id="first">
-        <div>
-            <img style="width:600px;margin-right:10px"
-                src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/show-desktop-aios-sb-dell-optiplex-24-7400nt-km7321w-uhp-2304-09-in-homepage-module-lf-1023x842-lr.png?fmt=png-alpha&wid=1023&hei=842"
-                alt="OPTIPLEX">
-        </div>
-
-        <div id="firstsecdiv">
-            <h3>OPTIPLEX DESKTOPS </h3>
-            <h2>Everything You Need. One Machine.</h2>
-            <h3>All your everyday computing needs, designed together.</h3>
-            <h5>*T&C apply.</h5>
-
-            <a href="">Shop All</a> | <a href="">Shop Deals</a>
-        </div>
-    </div>
-
-    <div id="first">
-
-
-        <div id="firstsecdiv">
-            <h3>CES® 2023 INNOVATION AWARD WINNERS
-
-            </h3>
-            <h2>Always Innovating</h2>
-            <h3> Discover award-winning products recognized for outstanding design and engineering.</h3>
-
-
-            <a href="">See Details</a>
-        </div>
-
-        <div>
-            <img style="width:600px"
-                src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/cs2302g0002-0ces-2023-site-banner-left-right-1288x785.png?fmt=jpg&wid=1288&hei=785"
-                alt="lap">
-        </div>
-    </div>
-
-    <div id="first">
-        <div>
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/uber/dell-powerstore-expan-bezel-lf-1023x842.png?fmt=png-alpha&wid=1023&hei=842"
-                alt="POWERSTORE">
-        </div>
-
-        <div id="firstsecdiv" style="margin-left:-100px">
-            <h3>POWERSTORE</h3>
-            <h2>The Future of Storage is Now</h2>
-            <h3> Future-proof intelligent storage that redefines performance.</h3>
-
-
-            <a href="">Learn More</a>
-        </div>
-    </div>
-
-    <div style="margin-top:-60px">
-
-        <div style="margin:auto;text-align:center">
-            <h3 style="color:orangered">SHOPPING DAYS</h3>
-            <p style="font-size:x-large">Time for Smart Savings</p>
-            <p>Supercharge productivity & security with 10% cashback on Citi cards, No Cost EMI, UPI Discounts. *T&C
-                apply</p>
-            <p> <a href="">For Business</a></p>
-
-            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/2-ups/dell-shopping-days-sb-dell-vostro-5620nt-uhp-2304-09-in-homepage-2up-module-800x400.png?fmt=pjpg&pscan=auto&scl=1&wid=800&hei=400&qlt=100,0&resMode=sharp2&size=800,400&op_usm=1.75,0.3,2,0"
-                alt="">
         </div>
     </div>
 
@@ -657,9 +652,47 @@
             </div>
         </div>
 
+        <div id="foot3">
+            <p> <u>*IMPORTANT DELL DETAIL</u></p>
+            <p>
+                <b>*DELL'S TERMS AND CONDITIONS</b> : apply to all sales available on request or at "Terms and
+                Conditions of
+                Sale" located at the bottom of our homepage at www.dell.co.in
+            </p>
+            <p>
+                <b>TRADEMARKS</b> : Celeron, Intel, the Intel logo, Intel Atom, Intel Core, Intel Inside, the Intel
+                Inside
+                logo, Intel vPro, Intel Evo, Intel Optane, Intel Xeon Phi, Iris, Itanium, MAX, Pentium, and Xeon are
+                trademarks of Intel Corporation or its subsidiaries.
+            </p>
+            <p>
+                © 2023 NVIDIA, the NVIDIA logo, GeForce, GeForce RTX, GeForce MAX-Q, GRID, SHIELD, Battery Boost, CUDA,
+                FXAA, GameStream, G-Sync, NVLINK, ShadowPlay, SLI, TXAA, PhysX, GeForce Experience, GeForce NOW,
+                Maxwell, Pascal and Turing are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S.
+                and other countries.
+
+            </p>
+            <p><b>RETURNS POLICY</b> : Dell's “Returns Policy” found at //www.dell.co.in/ applies to all sales. Choose
+                carefully, as order cancellation rights are limited and additional costs may apply.
+
+            </p>
+            <p> <b>MISTAKES</b> : While all efforts are made to check pricing and other errors, inadvertent errors do
+                occur
+                from time to time and Dell reserves the right to decline orders arising from such errors.
+            </p>
+            <p>
+                <b>ONLINE PRICING</b> : Prices advertised online include delivery charges & GST
+
+            </p>
+            <p> <b>No Cost EMI</b> - T&C
+
+
+            </p>
+            <p>COPYRIGHT: © 2023 Dell Inc. All rights reserved.</p>
+
+        </div>
+
     </div>
 </body>
 
 </html>
-
-<script src="./index.js"> </script>

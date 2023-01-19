@@ -69,6 +69,19 @@ productRoute.post("/businessdesktops",async(req,res)=>{
     }
 })
 
+
+productRoute.post("/cart",async(req,res)=>{
+    const data=req.body
+    try{
+      
+
+    }
+    catch(err)
+    {
+      console.log(err)
+    }
+})
+
 // PATCH
 
 
