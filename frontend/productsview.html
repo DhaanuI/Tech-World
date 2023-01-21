@@ -147,12 +147,12 @@
 
         #filter {
             width: 20%;
-            border: 1px solid black;
+            border:1px solid rgb(163, 156, 156);
         }
 
         #render {
             width: 78%;
-            border: 1px solid black;
+            /* border: 1px solid black; */
             padding: 30px
         }
 
@@ -174,6 +174,24 @@
         }
         #but{
             display: flex;
+        }
+        .container{
+            display:flex;
+        }
+        .container img{
+            width:400px;
+            height:300px
+        }
+        #render h3{
+            color:rgb(0,118,206)
+        }
+        #render>div{
+            border:1px solid rgb(163, 156, 156);
+            margin-bottom:20px;
+            padding:10px
+        }
+        #sorting{
+            margin-left:1079px
         }
     </style>
 </head>
@@ -220,9 +238,9 @@
 
     <div id="top1">
         <div id="lap">
-            <p style="font-size:50px">Laptop Computers & 2-in-1 PCs</p>
+            <p style="font-size:50px" id="title"></p>
 
-            <p>Shop the best laptops & notebooks from Dell. See top laptop deals today.</p>
+          
         </div>
         <div id="intel1">
             <div id="intel">
@@ -240,15 +258,19 @@
                         alt="">
                 </div>
             </div>
-            <div>
-                <img style="margin-left:200px;" width="30%"
-                    src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/apj/modules/republic-day-cons-dell-inspiron-5420nt-uhp-2304-12-homepage-module-rf-1023x842-lr.png?fmt=png-alpha&wid=1023&hei=842"
-                    alt="lap">
-            </div>
+           
         </div>
     </div>
 
 
+
+
+    <select name="sorti" id="sorting">
+        <option value="all">Sort by Price</option>
+        <option value="low">Lowest Price</option>
+        <option value="high">Highest Price</option>
+
+    </select>
     <div id="main">
         <div id="filter">
             <div>
@@ -256,20 +278,21 @@
             </div>
             <div>
                 <p>Refine by</p>
-                <input type="checkbox">
+                <input type="checkbox" id="home" onclick="homechecked()">
                 <label for="">For Home</label><br>
-                <input type="checkbox">
+                <input type="checkbox" id="business" onclick="businesschecked()">
                 <label for="">For Business</label>
             </div>
+            <br>
             <div>
                 <p>Product Line</p>
-                <input type="checkbox">
+                <input type="checkbox" id="inspiron" onclick="inspironchecked()">
                 <label for="">Inspiron</label><br>
-                <input type="checkbox">
+                <input type="checkbox" id="vostro" onclick="vostrochecked()"> 
                 <label for="">Vostro</label><br>
-                <input type="checkbox">
+                <input type="checkbox" id="xps" onclick="xpschecked()">
                 <label for="">XPS</label>
-            </div>
+            </div><br>
             <div>
                 <p>Screen Size</p>
                 <input type="checkbox">
@@ -282,7 +305,7 @@
                 <label for="">35.56 cm (14 inch) </label><br>
                 <input type="checkbox">
                 <label for="">33.02 cm (13 inch)</label>
-            </div>
+            </div><br>
             <div>
                 <p>Processor</p>
                 <input type="checkbox">
@@ -291,7 +314,7 @@
                 <label for="">Intel</label><br>
                 <input type="checkbox">
                 <label for="">AMD</label>
-            </div>
+            </div><br>
             <div>
                 <p>Price</p>
                 <input type="checkbox">
@@ -302,7 +325,7 @@
                 <label for="">60001 to 100000</label><br>
                 <input type="checkbox">
                 <label for="">Above 100001</label>
-            </div>
+            </div><br>
             <div>
                 <p>Memory</p>
                 <input type="checkbox">
@@ -312,262 +335,17 @@
                 <input type="checkbox">
                 <label for="">8GB</label>
 
-            </div>
+            </div><br>
             <div>
                 <p>OS</p>
                 <input type="checkbox">
                 <label for="">Windows 11 Home</label>
-            </div>
+            </div><br>
 
         </div>
         <div id="render">
-            <div id="first">
-                <div>
-                    <img id="common"
-                        src="https://i.dell.com/sites/csimages/Banner_Imagery/all/in-dhs-inspiron-laptops-tile-right-facing.png"
-                        alt="">
-                </div>
-                <div>
-                    <p style="font-size:40px;color:blue">Inspiron Laptops & 2-in-1 PCs</p>
-                    <h4>Versatile Performance Starting at ₹ 33,990.02</h4>
-                    <p>Create, consume and connect in style with versatile laptops and 2-in-1s.</p>
-
-                    <button onclick="gotoinspiron()" id="clickshopinspiron"style="background-color:rgb(0,118,206);color:white;border:0px">Shop Inspiron</button> <button style="background-color:white;color:blue;border:1px solid blue">Explore Inspiron</button>
-
-                </div>
-            </div>
-            <div>
-                <p style="font-size:40px;color:rgb(109, 109, 235)">Which Laptop is right for you</p>
-
-                <div id="first">
-                    <div>
-                        <select name="" id="laptops">
-                            <option value="Inspiron">Inspiron</option>
-                            <option value="Alienware">Alienware</option>
-                            <option value="G Series">G Series</option>
-                        </select>
-                        <br>
-                        <img id="one"
-                            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/dell-homepage/pt-br/other/in5320nt-cnb-05000ff090-gy-fpr-cat-compare.png?$S7-png$&wid=800&hei=550&qlt=100,0&resMode=sharp2"
-                            alt="">
-
-                        <h4>Versatile Performance</h4>
-                        <p>Starting at ₹ 33,990.02 </p>
-
-                        <ul>
-                            <li>
-                                Perform personal & home office tasks
-                            </li>
-                            <li>
-                                Stream, browse and multitask
-                            </li>
-                            <li>
-                                Video chat with enhanced audio & visuals
-                            </li>
-                            <li>
-                                Create social content
-                            </li>
-                        </ul>
-                        <button onclick="gotoinspiron()"id="clickshopinspiron" style="background-color:rgb(0,118,206);color:white;border:0px">Shop Inspiron</button><br>
-                        <button style="background-color:white;color:blue;border:1px solid blue">Explore Inspiron</button>
-
-                    </div>
-                    <div>
-                        <select name="" id="laptops">
-                            <option value="Vostro">Vostro</option>
-                            <option value="Alienware">Alienware</option>
-                            <option value="G Series">G Series</option>
-                        </select>
-                        <br>
-                        <img id="one"
-                            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/category-pages/latam/dv7620nt-cnb-05000ff090-nonfpr-bk.png?$S7-png$&wid=800&hei=550&qlt=100,0&resMode=sharp2"
-                            alt="">
-
-                        <h4>Small Business Productivity</h4>
-                        <p>Starting at ₹ 41,989.99 </p>
-
-                        <ul>
-                            <li>
-                                Protect data with essential security
-                            </li>
-                            <li>
-                                Power business applications
-                            </li>
-                            <li>
-                                Collaborate with video conferencing
-                            </li>
-                        </ul>
-                        <br>
-                        <button onclick="gotovostro()"id="clickshopvostro"style="background-color:rgb(0,118,206);color:white;border:0px">Shop Vostro</button><br>
-                        <button style="background-color:white;color:blue;border:1px solid blue">Explore Vostro</button>
-
-                    </div>
-
-                    <div>
-                        <select name="" id="laptops">
-                            <option value="XPS">XPS</option>
-                            <option value="Alienware">Alienware</option>
-                            <option value="G Series">G Series</option>
-                        </select>
-                        <br>
-                        <img id="one"
-                            src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/franchise/xps/prod-2011-tablet-xps-13-9315-blue-folio-800x550.png?fmt=png-alpha&wid=800&hei=550"
-                            alt="">
-
-                        <h4>Creators and Creativity</h4>
-                        <p>Starting at ₹ 1,04,989.97</p>
-
-                        <ul>
-                            <li>
-                                Multitask between intensive programs
-                            </li>
-                            <li>
-                                Produce video, photography and music
-                            </li>
-                            <li>
-                                Create & edit digital content
-                            </li>
-                            <li>
-                                Be productive anywhere
-                            </li>
-                        </ul>
-
-                        <button onclick="gotoxps()"id="clickshopxps"style="background-color:rgb(0,118,206);color:white;border:0px">Shop XPS</button> <br>
-                        <button style="background-color:white;color:blue;border:1px solid blue">Explore XPS</button>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="first">
-                <div>
-                    <p>Vostro Laptop</p>
-                    <h4>Small Business Productivity Starting at ₹ 41,989.99</h4>
-
-                    <p>Power your small business with laptops built to deliver security, performance and enhanced video
-                        conferencing.</p>
-
-                    <button id="clickshopvostro" style="background-color:rgb(0,118,206);color:white;border:0px">Shop Vostro</button> <button>Explore Vostro</button>
-
-
-                </div>
-                <div>
-                    <img id="common"
-                        src="https://i.dell.com/sites/csimages/Banner_Imagery/all/in-dhs-vostro-laptops-tile-left-facing.png"
-                        alt="">
-                </div>
-            </div>
-
-            <div id="first">
-
-                <div>
-                    <img id="common"
-                        src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/category/laptop/prod-2024-notebook-xps-13-9320-nt-13-9315-nt-tablet-13-9315-2-in-1-800x620-v2.png?fmt=png-alpha&wid=800&hei=620"
-                        alt="">
-                </div>
-
-                <div>
-                    <p>XPS Laptops & 2-in-1 PCs</p>
-                    <h4>Creators & Creativity Starting at ₹ 1,04,989.97</h4>
-
-                    <p>Power your creativity with premium, high-performing and beautifully-crafted laptops with
-                        innovative features.</p>
-
-                    <button onclick="gotoxps()"id="clickshopxps"style="background-color:rgb(0,118,206);color:white;border:0px">Shop XPS</button> <button style="background-color:white;color:blue;border:1px solid blue">Explore XPS</button>
-                </div>
-
-            </div>
-
-            <div id="first">
-
-
-
-                <div>
-                    <p>Alienware Gaming Laptops</p>
-                    <h4>Immersive Gaming Experiences Starting at ₹ 1,59,989.99</h4>
-
-                    <p>Power your creativity with premium, high-performing and beautifully-crafted laptops with
-                        innovative features.</p>
-
-                    <button onclick="gotoalienware()"id="clickshopalienware"style="background-color:rgb(0,118,206);color:white;border:0px">Shop Alienware</button> <button style="background-color:white;color:blue;border:1px solid blue">Explore Alienware</button>
-                </div>
-
-                <div>
-                    <img id="common"
-                        src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/page/category/laptop/prod-2024-notebook-xps-13-9320-nt-13-9315-nt-tablet-13-9315-2-in-1-800x620-v2.png?fmt=png-alpha&wid=800&hei=620"
-                        alt="">
-                </div>
-
-            </div>
-
-            <div id="first">
-                <div>
-                    <img id="common"
-                        src="https://i.dell.com/sites/csimages/Banner_Imagery/all/in-dhs-g-series-laptops-tile-right-facing.png"
-                        alt="">
-                </div>
-                <div>
-                    <p>G Series Gaming Laptops</p>
-                    <h4>Immersive Gaming Experiences Starting at ₹ 1,59,989.99</h4>
-
-                    <p>Power your creativity with premium, high-performing and beautifully-crafted laptops with
-                        innovative features.</p>
-
-                    <button onclick="gotogseries()" id="clickshopgseries" style="background-color:rgb(0,118,206);color:white;border:0px">Shop G Series</button> <button style="background-color:white;color:blue;border:1px solid blue">Explore G Series</button>
-                </div>
-
-
-
-            </div>
-
-            <div id="first">
-                <div>
-                    <p>Laptop Deals</p>
-                    <h4>Our best-priced laptop computers</h4>
-
-                    <p>Take advantage of limited-time savings on select laptops. Shop our exclusive deals and get the
-                        best for less.</p>
-
-                    <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop Deals</button>
-
-                </div>
-                <div>
-                    <img id="common"
-                        src="https://i.dell.com/sites/csimages/Banner_Imagery/all/in-dhs-laptop-deals-left-facing.png"
-                        alt="">
-                </div>
-            </div>
-
-            <div id="first">
-                <div>
-                    <img id="common"
-                        src="https://i.dell.com/sites/csimages/Banner_Imagery/all/in5420ntcnb00055rf110gyfpr2.png"
-                        alt="">
-                </div>
-                <div>
-                    <p>Student Laptop Deals</p>
-                    <h4>Student Special</h4>
-
-                    <p>Take advantage of limited-time savings on select laptops. Shop our exclusive deals and get the
-                        best for less.</p>
-
-                    <button style="background-color:rgb(0,118,206);color:white;border:0px">Shop Student Deals</button>
-
-                </div>
-
-            </div>
-
-
-            <div>
-                <p>How easy is it to find what you are looking for?</p>
-                <div id="but">
-                    <p>Very Difficult</p> <button>1</button> <button>2</button> <button>3</button> <button>4</button>
-                    <button>5</button> <button>6</button> <button>7</button>
-                    <p>Very Easy</p>
-
-                </div>
-            </div>
+           
+     
         </div>
     </div>
 
@@ -697,5 +475,4 @@
 
 </html>
 
-
-<script src="./products.js"></script>
+<script src="./productsview.js"></script>

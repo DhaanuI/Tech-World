@@ -10,6 +10,83 @@ const {authenticate}=require("../middlewares/authenticate.middleware")
 const productRoute = express.Router();
 productRoute.use(express.json())
 
+// productRoute.get("/businessdesktops",async(req,res)=>{
+//     const query = req.query;
+//     try{
+        
+//     const data = await BusinessdeskModel.find({ title: { $regex: query, $options: "i" } })
+//     res.send(data)
+//     }
+//     catch{
+//         res.send({ "err": "something went wrong" })
+//     }
+// })
+
+// productRoute.get("/homedesktops",async(req,res)=>{
+//     const query = req.query;
+//     try{
+//         const data = await HomedeskModel.find({ title: { $regex: query, $options: "i" } })
+//         res.send(data)
+//     }
+//     catch{
+//         res.send({ "err": "something went wrong" })
+//     }
+// })
+
+productRoute.get("/homedesktops/:title", async (req, res) => {
+    const {title} = req.params;
+    const data = await HomedeskModel.find({ title: { $regex: title, $options: "i" } })
+    res.send(data)
+})
+
+productRoute.get("/homedesktops/", async (req, res) => {
+   
+    const data = await HomedeskModel.find()
+    res.send(data)
+})
+
+productRoute.get("/businessdesktops/:title", async (req, res) => {
+    const {title} = req.params;
+    const data = await BusinessdeskModel.find({ title: { $regex: title, $options: "i" } })
+    res.send(data)
+})
+
+productRoute.get("/businessdesktops/", async (req, res) => {
+   
+    const data = await BusinessdeskModel.find()
+    res.send(data)
+})
+
+
+
+productRoute.get("/businesslaptops/:title", async (req, res) => {
+    const {title} = req.params;
+    const data = await BusinesslapModel.find({ title: { $regex: title, $options: "i" } })
+    res.send(data)
+})
+
+productRoute.get("/businesslaptops/", async (req, res) => {
+   
+    const data = await BusinesslapModel.find()
+    res.send(data)
+})
+
+productRoute.get("/homelaptops/:title", async (req, res) => {
+    const {title} = req.params;
+    const data = await HomelapModel.find({ title: { $regex: title, $options: "i" } })
+    res.send(data)
+})
+
+productRoute.get("/homelaptops/", async (req, res) => {
+   
+    const data = await HomelapModel.find()
+    res.send(data)
+})
+
+
+ 
+
+
 // POST
 
 productRoute.post("/homedesktops",async(req,res)=>{
