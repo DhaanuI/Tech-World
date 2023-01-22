@@ -5,33 +5,13 @@ const { BusinesslapModel } = require("../model/businesslap.model");
 const { HomedeskModel } = require("../model/homedesk.model");
 const { HomelapModel } = require("../model/homelap.model");
 
-const {authenticate}=require("../middlewares/authenticate.middleware")
+const {authenticate}=require("../middlewares/authenticate.middleware");
+const { CartModel } = require("../model/cart.model");
 
 const productRoute = express.Router();
 productRoute.use(express.json())
 
-// productRoute.get("/businessdesktops",async(req,res)=>{
-//     const query = req.query;
-//     try{
-        
-//     const data = await BusinessdeskModel.find({ title: { $regex: query, $options: "i" } })
-//     res.send(data)
-//     }
-//     catch{
-//         res.send({ "err": "something went wrong" })
-//     }
-// })
 
-// productRoute.get("/homedesktops",async(req,res)=>{
-//     const query = req.query;
-//     try{
-//         const data = await HomedeskModel.find({ title: { $regex: query, $options: "i" } })
-//         res.send(data)
-//     }
-//     catch{
-//         res.send({ "err": "something went wrong" })
-//     }
-// })
 
 productRoute.get("/homedesktops/:title", async (req, res) => {
     const {title} = req.params;
@@ -147,17 +127,7 @@ productRoute.post("/businessdesktops",async(req,res)=>{
 })
 
 
-productRoute.post("/cart",async(req,res)=>{
-    const data=req.body
-    try{
-      
 
-    }
-    catch(err)
-    {
-      console.log(err)
-    }
-})
 
 // PATCH
 
@@ -198,6 +168,46 @@ productRoute.delete("/homedesktops",(req,res)=>{
 })
 
 
+productRoute.use(authenticate)
+
+productRoute.post("/addtocart",async(req,res)=>{
+    const data=req.body;
+    try {
+      const pro=new CartModel(data)
+      await pro.save()
+        res.send("Data is added to DB")
+
+    }
+    catch (err) {
+        res.send({ "err": "something went wrong" })
+    }
+})
+
+productRoute.get("/cart/:userID",async(req,res)=>{
+    const {userID} = req.params;
+    const data = await CartModel.find({ userID: { $regex: userID, $options: "i" } })
+    //res.send(data)
+
+    const userid_in_req=payload.userID;
+    const userid_in_doc=data[0].userID;
+    
+    try{
+        if(userid_in_req!==userid_in_doc)
+        {
+            res.send({"message":"you arenot authorised"})
+        }
+        else{
+            const data = await CartModel.find({ userID: { $regex: userID, $options: "i" } })
+            res.send(data)
+        }
+
+    }
+    catch(err)
+    {
+          console.log(err)
+          res.send("error")
+    }
+})
 
 
 

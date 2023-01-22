@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN PAGE</title>
+</head>
+
+<body>
+    <h1>TECH WORLD BACKEND:</h1>
+
+    <h3>To Post data into the DATABASE</h3>
+
+    <input id="title" type="text" placeholder="enter title">
+    <input id="order_code"type="text" placeholder="enter order_code">
+    <input id="Processor"type="text" placeholder="enter Processor">
+    <input id="OS"type="text" placeholder="enter OS">
+    <input id="Graphics"type="text" placeholder="enter Graphics">
+    <input id="Memory"type="text" placeholder="enter Memory">
+    <input id="Storage"type="text" placeholder="enter Storage">
+    <input id="Display" type="text" placeholder="enter Display">
+    <input id="onlineprice type="text" placeholder="enter onlineprice">
+    <input id="price" type="text" placeholder="enter price">
+    <br>
+    <button>POST DATA</button>
+
+</body>
+
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click", () => {
+
+        let title = document.queryselector("#title").value;
+        let order_code = document.queryselector("#order_cod").value;
+        let Processor = document.queryselector("#Processor").value;
+        let OS = document.queryselector("#OS").value;
+        let memory = document.queryselector("#Memory").value;
+        let storage = document.queryselector("#Storage").value;
+        let price = document.queryselector("#price").value;
+        let Display = document.queryselector("#Display").value;
+        let onlineprice = document.queryselector("#onlineprice").value;
+        let graphics = document.queryselector("#Graphics").value;
+
+
+        let obj = {
+            title, order_code, Processor, OS, memory, storage, price, Display, onlineprice, graphics
+        }
+        postdata(obj)
+    })
+
+    
+    async function postdata(obj) {
+        await fetch("http://localhost:4500/products/homelaptops", {
+            method: "POST",
+            body: JSON.stringify(obj),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+    }
+</script>
