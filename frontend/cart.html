@@ -336,7 +336,7 @@
         }
         #infoprice ,
         #buttons,
-        #mainbox1{
+        #box1>div{
             display: flex;
         }
         #price{
@@ -664,11 +664,16 @@
 <script>
 
     let cartarr = JSON.parse(localStorage.getItem("cart")) || []
+fun()
+    function fun()
+    {
 
+        document.querySelector("#box1").innerHTML=""
+   
     cartarr.forEach((data, index) => {
 
         let div = document.createElement("div")
-        div.setAttribute("id", "mainbox1")
+        div.setAttribute("id", "mainbox"+index)
 
         let div1 = document.createElement("div")
         div1.setAttribute("id", "imagebox")
@@ -684,8 +689,13 @@
         let title = document.createElement("h4")
         title.innerText = data.title;
 
-        let edit = document.createElement("p")
-        edit.innerText = "Edit";
+        let edit = document.createElement("button")
+        edit.innerText = "Remove";
+        edit.setAttribute("id","remove")
+        edit.setAttribute("onclick",`clickme(mainbox+${index})`)
+        // edit.addEventListener("click",()=>{
+        //     document.querySelector("mainbox"+index).innerHTML=""
+        // })
 
         let save = document.createElement("p")
         save.innerText = "Save for Later";
@@ -714,11 +724,22 @@
         div2.append(title,edit,save)
         div.append(div1, div2,div3,div4)
 
-        
-
         document.querySelector("#box1").append(div)
 
     })
+}
+
+
+    function clickme(index)
+    {
+        console.log("work")
+        cartarr.splice(index,1)
+        fun()
+        localStorage.setItem("cart",JSON.stringify(cartarr))
+        document.getElementById("quantity").innerText="Items:"+" "+quan
+    document.getElementById("totalvalue").innerText="Total Order Value:"+" "+"₹"+123988
+    }
+
     let quan=0
     let total=0
     cartarr.forEach((data,index)=>{

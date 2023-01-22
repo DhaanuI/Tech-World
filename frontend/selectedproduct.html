@@ -583,7 +583,7 @@ document.querySelector("#addtocart").addEventListener("click",clickme);
 
 
 function clickme(){
-
+console.log(arr[0])
     cartarr.push(arr[0])
     console.log(cartarr)
     localStorage.setItem("cart",JSON.stringify(cartarr))
