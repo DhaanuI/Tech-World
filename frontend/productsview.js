@@ -1,3 +1,48 @@
+let name=localStorage.getItem("username");
+    console.log(name)
+
+    if(name)
+    {
+        
+document.getElementById("signin").innerText=name;
+
+document.getElementById("dropdowntools").innerHTML="";
+
+let button=document.createElement("button")
+button.innerText="Log Out"
+document.getElementById("dropdowntools").append(button)
+
+button.addEventListener("click",()=>{
+    localStorage.removeItem("username");
+    window.location.href="./index.html"
+
+    document.getElementById("signin").innerText="Sign In";
+    document.getElementById("dropdowntools").innerHTML=`<h3 style="margin-top:-10px">Welcome to Tech World</h3>
+                    <p>My Account</p>
+                    <ul>
+                        <li>Place orders quickly and easily</li>
+                        <li>View orders and track your shipping status </li>
+                        <li>Create and access a list of your products</li>
+                    </ul>
+
+                    <!-- <button style="background-color:rgb(0,118,206);color:white;border:0px">Sign In</button> <br> -->
+                    <button style="cursor:pointer;background-color:rgb(0,118,206);color:white;border:0px"><a style="text-decoration: none;color:white"
+                        href="./signin.html">Sign In</a></button>
+                        <button style="cursor:pointer;color:rgb(0,118,206);border:1px"><a style="text-decoration: none;;"
+                            href="./signup.html">Create an account</a></button>
+                    <!-- <button>t</button><br> -->
+                    <button>Premier Sign In</button><br>
+                    <button>Partner Program</button><br>
+    `
+
+})
+
+}
+
+else if(name==null){
+    document.getElementById("signin").innerText="Sign In";
+}
+
 
 
 let url = "http://localhost:4500/products/homelaptops"
@@ -7,7 +52,7 @@ async function fetchData() {
             "https://alive-plum-capybara.cyclic.app/products/homelaptops/inspiron"
         );
         let data = await fetchedData.json();
-        console.log(data)
+        //console.log(data)
         display(data)
         document.querySelector("#sorting").addEventListener("change", function () {
             let selected = document.querySelector("#sorting").value;
@@ -40,7 +85,7 @@ function display(data) {
     data.forEach((elem, index) => {
 
         let div = document.createElement("div");
-        div.setAttribute("class", "container")
+        div.setAttribute("id", index)
         //div.setAttribute("onclick",clickme())
         let imagediv = document.createElement("div");
         let pricediv = document.createElement("div");
@@ -60,6 +105,7 @@ function display(data) {
 
         let image = document.createElement("img");
         image.setAttribute("src", elem.image);
+        image.setAttribute("id", elem._id);
         // image.setAttribute("id", "product"+i+"image");
 
         let infodiv = document.createElement("div");
@@ -96,7 +142,7 @@ function display(data) {
         pricediv.append(off, online, price, dat, del, e)
 
         let div1 = document.createElement("div");
-
+        //div1.setAttribute("id", elem._id)
         div1.append(div)
         document.querySelector("#render").append(div1)
 
@@ -113,12 +159,14 @@ function display(data) {
 
 
     let fun = document.querySelectorAll("#render>div");
-    console.log(fun)
+    
     arr=[1]
     for (let i = 0; i < fun.length; i++) {
-        fun[i].addEventListener("click", function () {
+        fun[i].addEventListener("click", function (e) {
             
-            image = document.querySelector("#product" + i + ">.container>div>img").src;
+            
+            
+            image = document.querySelector("#product" + i + ">div>div>img").src;
             title = document.querySelector("#product" + i + " h3").innerText
             price = document.querySelector("#product" + i + "price").innerText
             online = document.querySelector("#product" + i + "online").innerText
@@ -128,6 +176,7 @@ function display(data) {
             storage = document.querySelector("#product" + i + "storage").innerText
             graphics = document.querySelector("#product" + i + "graphics").innerText
             quantity=1;
+            userID=e.target.id
 
             // console.log(image)
             // console.log(name)
@@ -142,7 +191,8 @@ function display(data) {
                 os, 
                 storage, 
                 graphics,
-                quantity
+                quantity,
+                userID
             }
 
 arr[0]=clickedobj

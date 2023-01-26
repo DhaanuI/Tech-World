@@ -170,44 +170,9 @@ productRoute.delete("/homedesktops",(req,res)=>{
 
 productRoute.use(authenticate)
 
-productRoute.post("/addtocart",async(req,res)=>{
-    const data=req.body;
-    try {
-      const pro=new CartModel(data)
-      await pro.save()
-        res.send("Data is added to DB")
 
-    }
-    catch (err) {
-        res.send({ "err": "something went wrong" })
-    }
-})
 
-productRoute.get("/cart/:userID",async(req,res)=>{
-    const {userID} = req.params;
-    const data = await CartModel.find({ userID: { $regex: userID, $options: "i" } })
-    //res.send(data)
 
-    const userid_in_req=payload.userID;
-    const userid_in_doc=data[0].userID;
-    
-    try{
-        if(userid_in_req!==userid_in_doc)
-        {
-            res.send({"message":"you arenot authorised"})
-        }
-        else{
-            const data = await CartModel.find({ userID: { $regex: userID, $options: "i" } })
-            res.send(data)
-        }
-
-    }
-    catch(err)
-    {
-          console.log(err)
-          res.send("error")
-    }
-})
 
 
 

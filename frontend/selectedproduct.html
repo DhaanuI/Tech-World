@@ -20,9 +20,11 @@
             margin-top: -60px;
             margin-right: 40px
         }
-        button{
-            cursor:pointer
+
+        button {
+            cursor: pointer
         }
+
         #options {
             display: flex;
             width: 40%
@@ -195,59 +197,162 @@
 
         #render>div {
             /* border: 1px solid rgb(163, 156, 156); */
-            width:100%;
+            width: 100%;
             margin-bottom: 20px;
             padding: 10px
         }
-        #image{
-            width:400px;
-            height:400px
+
+        #image {
+            width: 400px;
+            height: 400px
         }
+
         #imageprice,
-        #information{
-            width:50%
+        #information {
+            width: 50%
         }
 
         #process,
         #mem,
         #stor,
         #os,
-        #graph{
+        #graph {
             display: flex;
         }
-        #headlines{
+
+        #headlines {
             display: flex;
         }
-        #headlines>p{
-            margin-right:20px
+
+        #headlines>p {
+            margin-right: 20px
         }
-       
-        #render{
+
+        #render {
             /* border:1px solid black; */
-            width:100%
+            width: 100%
         }
+
         #process,
         #mem,
         #os,
         #stor,
-        #graph{
-            border:1px solid rgb(184, 181, 181);
-            margin-bottom:8px;
+        #graph {
+            border: 1px solid rgb(184, 181, 181);
+            margin-bottom: 8px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            padding:10px
+            padding: 10px
         }
-        #addcart,#addtocart{
-            background-color: rgb(79,125,0);
-            border:0px;
-            color:white;
-            width:100px;
-            height:40px;
-            font-size:medium;
-            margin-left:50px
+
+        #addcart,
+        #addtocart {
+            background-color: rgb(79, 125, 0);
+            border: 0px;
+            color: white;
+            width: 100px;
+            height: 40px;
+            font-size: medium;
+            margin-left: 50px
         }
-        #showprice{
+
+        #showprice {
             display: flex;
-            margin-left:1050px
+            margin-left: 1050px
+        }
+
+        #toolshover>p,
+        #channelshover>p {
+            position: relative;
+
+        }
+
+        #toolshover>p::before,
+        #channelshover>p::before {
+            content: "";
+            position: absolute;
+            top: 150%;
+            width: 0%;
+            margin: auto;
+            height: 3px;
+            background-color: rgb(44, 124, 255);
+
+        }
+
+        #toolshover>p:hover::before,
+        #channelshover>p:hover::before {
+            width: 100%;
+        }
+
+        #toolshover>p:hover,
+        #channelshover>p:hover {
+            color: rgb(44, 124, 255);
+        }
+
+
+
+        #toolshover,
+        #channelshover {
+            cursor: pointer;
+
+        }
+
+        #dropdowntools,
+        #dropdownchannels {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+            padding: 20px 10px 10px 10px;
+
+        }
+
+        #dropdowntools>div,
+        #dropdownchannels>div {
+            float: none;
+            color: black;
+            padding: 0px 30px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            border-radius: 5px;
+
+        }
+
+        #dropdowntools>div:hover,
+        #dropdownchannels>div:hover {
+            background-color: rgb(236, 232, 232);
+            border-radius: 10px;
+        }
+
+        #toolshover:hover #dropdowntools,
+        #channelshover:hover #dropdownchannels {
+            display: block;
+
+
+        }
+
+        #dropdowntools p,
+        #dropdownchannels p {
+            margin-top: -10px
+        }
+
+        #toolshover {
+            margin-right: 30px
+        }
+
+        #toolshover button {
+            width: 90%;
+            color: rgb(0, 118, 206);
+            margin-bottom: 10px;
+            height: 30px;
+            margin-left: 18px
+        }
+
+        button {
+            cursor: pointer
         }
     </style>
 </head>
@@ -260,9 +365,27 @@
         <input id="input" type="text" placeholder="Search Tech_World">
 
         <div id="options">
-            <div>
+            <div id="toolshover">
                 <img src="https://img.icons8.com/puffy/2x/experimental-user-puffy.png" alt="signin">
-                <h5>Sign In</h5>
+                <h5 id="signin">Sign In</h5>
+                <div style="margin-top:40px" id="dropdowntools">
+                    <h3 style="margin-top:-10px">Welcome to Tech World</h3>
+                    <p>My Account</p>
+                    <ul>
+                        <li>Place orders quickly and easily</li>
+                        <li>View orders and track your shipping status </li>
+                        <li>Create and access a list of your products</li>
+                    </ul>
+
+                    <!-- <button style="background-color:rgb(0,118,206);color:white;border:0px">Sign In</button> <br> -->
+                    <button style="cursor:pointer;background-color:rgb(0,118,206);color:white;border:0px"><a
+                            style="text-decoration: none;color:white" href="./signin.html">Sign In</a></button>
+                    <button style="cursor:pointer;color:rgb(0,118,206);border:1px"><a style="text-decoration: none;;"
+                            href="./signup.html">Create an account</a></button>
+                    <!-- <button>t</button><br> -->
+                    <button>Premier Sign In</button><br>
+                    <button>Partner Program</button><br>
+                </div>
             </div>
             <div>
                 <img src="https://cdn-icons-png.flaticon.com/128/810/810350.png" alt="contact">
@@ -276,7 +399,9 @@
             <div>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdCYOcz2do9rQylt8XnMawcSwL1a-qaEfXxQ&usqp=CAU"
                     alt="cart">
-                <h5>Cart</h5>
+                <a href="./cart.html">
+                    <h5>Cart</h5>
+                </a>
             </div>
         </div>
     </div>
@@ -322,21 +447,21 @@
     <div id="title">
 
     </div>
-    <div id="headlines"style="display:flex">
+    <div id="headlines" style="display:flex">
         <p style="margin-left:50px">Customization</p>
         <p>Tech Specs</p>
         <p>Product Details</p>
         <p>Ratings & Reviews</p>
         <p>Drivers, Manuals & Support</p>
     </div>
-<hr>
+    <hr>
 
-<div id="showprice">
-    <div id="showprice1">
+    <div id="showprice">
+        <div id="showprice1">
 
+        </div>
+        <button id="addtocart">Add to Cart</button>
     </div>
-    <button id="addtocart">Add to Cart</button>
-</div>
     <div id="main" style="margin-top:-38px">
 
         <div id="render">
@@ -349,23 +474,24 @@
                 <button>Intel</button> <button>AMD</button>
 
                 <div style="background-color:skyblue;">
-                    <p style="padding:10px;">Options with information icons () require changes to other specs. Select the icons for details.</p>
+                    <p style="padding:10px;">Options with information icons () require changes to other specs. Select
+                        the icons for details.</p>
                 </div>
 
                 <div id="process">
 
                 </div>
                 <div id="mem">
-                    
+
                 </div>
                 <div id="stor">
-                    
+
                 </div>
                 <div id="os">
-                    
+
                 </div>
                 <div id="graph">
-                    
+
                 </div>
 
             </div>
@@ -503,92 +629,157 @@
 
 <script>
 
-let arr=JSON.parse(localStorage.getItem("clicked"))
-console.log(arr)
-let cartarr=JSON.parse(localStorage.getItem("cart")) || []
-arr.forEach((data,index)=>{
-    document.getElementById("title").innerText=data.title;
+    let name = localStorage.getItem("username");
+    console.log(name)
 
-    let title=document.createElement("h3")
-    title.innerText=data.title;
+    if (name) {
 
-    let imageprice=document.createElement("div")
-    
+        document.getElementById("signin").innerText = name;
 
-    let imagediv=document.createElement("div")
-    let img=document.createElement("img")
-    img.setAttribute("src",data.image)
-    img.setAttribute("id","image")
-    imagediv.append(img)
-    let pricediv=document.createElement("div")
-    let hurry=document.createElement("p")
-    hurry.innerText="Hurry! Price Increase from 23rd Jan"
-    let onlineprice=document.createElement("p")
-    onlineprice.innerText=data.online
-    let pricee=document.createElement("p")
-    pricee.innerHTML=`<b>${data.price}</b>`
-    let info=document.createElement("p")
-    info.innerText="Price inclusive of GST. Free Delivery."
-    let financing=document.createElement("h4")
-    financing.innerText="Financing"
-    let infoo=document.createElement("p")
-    infoo.innerText="No cost EMI available . See options at checkout."
-    pricediv.append(hurry,onlineprice,pricee,info,financing,infoo)
-    
+        document.getElementById("dropdowntools").innerHTML = "";
 
-    imageprice.append(imagediv,pricediv)
-    
-    document.querySelector("#imageprice").append(imageprice)
+        let button = document.createElement("button")
+        button.innerText = "Log Out"
+        document.getElementById("dropdowntools").append(button)
 
-    
-    let processorinfo=document.createElement("p")
-    processorinfo.innerText=data.processor
+        button.addEventListener("click", () => {
+            localStorage.removeItem("username");
 
-    let hr=document.createElement("hr")
+            document.getElementById("signin").innerText = "Sign In";
+            document.getElementById("dropdowntools").innerHTML = `<h3 style="margin-top:-10px">Welcome to Tech World</h3>
+                    <p>My Account</p>
+                    <ul>
+                        <li>Place orders quickly and easily</li>
+                        <li>View orders and track your shipping status </li>
+                        <li>Create and access a list of your products</li>
+                    </ul>
 
-    document.querySelector("#process").append(processorinfo)
+                    <!-- <button style="background-color:rgb(0,118,206);color:white;border:0px">Sign In</button> <br> -->
+                    <button style="cursor:pointer;background-color:rgb(0,118,206);color:white;border:0px"><a style="text-decoration: none;color:white"
+                        href="./signin.html">Sign In</a></button>
+                        <button style="cursor:pointer;color:rgb(0,118,206);border:1px"><a style="text-decoration: none;;"
+                            href="./signup.html">Create an account</a></button>
+                    <!-- <button>t</button><br> -->
+                    <button>Premier Sign In</button><br>
+                    <button>Partner Program</button><br>
+    `
 
-    
-    let memoryinfo=document.createElement("p")
-    memoryinfo.innerText=data.memory
+        })
 
-    document.querySelector("#mem").append(memoryinfo)
+    }
 
-    let storageinfo=document.createElement("p")
-    storageinfo.innerText=data.storage
-
-    document.querySelector("#stor").append(storageinfo)
-
-   
-    let graphicsinfo=document.createElement("p")
-    graphicsinfo.innerText=data.graphics
-
-    document.querySelector("#os").append(graphicsinfo)
-
-   
-    let osinfo=document.createElement("p")
-    osinfo.innerText=data.os
-
-    document.querySelector("#graph").append(osinfo)
+    else if (name == null) {
+        document.getElementById("signin").innerText = "Sign In";
+    }
 
 
-    document.querySelector("#showprice1").append(pricee)
 
 
-})
+    let arr = JSON.parse(localStorage.getItem("clicked"))
+    console.log(arr)
+    let cartarr = JSON.parse(localStorage.getItem("cart")) || []
+    arr.forEach((data, index) => {
+        document.getElementById("title").innerText = data.title;
+
+        let title = document.createElement("h3")
+        title.innerText = data.title;
+
+        let imageprice = document.createElement("div")
 
 
-document.querySelector("#addcart").addEventListener("click",clickme);
-document.querySelector("#addtocart").addEventListener("click",clickme);
+        let imagediv = document.createElement("div")
+        let img = document.createElement("img")
+        img.setAttribute("src", data.image)
+        img.setAttribute("id", "image")
+        imagediv.append(img)
+        let pricediv = document.createElement("div")
+        let hurry = document.createElement("p")
+        hurry.innerText = "Hurry! Price Increase from 23rd Jan"
+        let onlineprice = document.createElement("p")
+        onlineprice.innerText = data.online
+        let pricee = document.createElement("p")
+        pricee.innerHTML = `<b>${data.price}</b>`
+        let info = document.createElement("p")
+        info.innerText = "Price inclusive of GST. Free Delivery."
+        let financing = document.createElement("h4")
+        financing.innerText = "Financing"
+        let infoo = document.createElement("p")
+        infoo.innerText = "No cost EMI available . See options at checkout."
+        pricediv.append(hurry, onlineprice, pricee, info, financing, infoo)
 
 
-function clickme(){
-console.log(arr[0])
-    cartarr.push(arr[0])
-    console.log(cartarr)
-    localStorage.setItem("cart",JSON.stringify(cartarr))
-    window.location.href="./cart.html"
-}
+        imageprice.append(imagediv, pricediv)
+
+        document.querySelector("#imageprice").append(imageprice)
+
+
+        let processorinfo = document.createElement("p")
+        processorinfo.innerText = data.processor
+
+        let hr = document.createElement("hr")
+
+        document.querySelector("#process").append(processorinfo)
+
+
+        let memoryinfo = document.createElement("p")
+        memoryinfo.innerText = data.memory
+
+        document.querySelector("#mem").append(memoryinfo)
+
+        let storageinfo = document.createElement("p")
+        storageinfo.innerText = data.storage
+
+        document.querySelector("#stor").append(storageinfo)
+
+
+        let graphicsinfo = document.createElement("p")
+        graphicsinfo.innerText = data.graphics
+
+        document.querySelector("#os").append(graphicsinfo)
+
+
+        let osinfo = document.createElement("p")
+        osinfo.innerText = data.os
+
+        document.querySelector("#graph").append(osinfo)
+
+
+        document.querySelector("#showprice1").append(pricee)
+
+
+    })
+
+
+    document.querySelector("#addcart").addEventListener("click", clickme);
+    document.querySelector("#addtocart").addEventListener("click", clickme);
+
+
+    async function clickme() {
+
+        // let obj={
+        //     productID:arr[0].userID
+        // }
+        console.log(arr[0].userID)
+        try {
+            let res=await fetch(`http://localhost:4500/cart/${arr[0].userID}`,{
+                method:"POST",
+                headers : {
+				"Content-Type" : "application/json",
+                Authorization: `${localStorage.getItem("token")}`
+            }
+                // body:JSON.stringify(obj)
+            })
+            alert("Item added to cart")
+             window.location.href = "./cart.html"
+
+        }
+        catch (err) {
+            console.log(err)
+        }
+
+
+        
+    }
 
 
 

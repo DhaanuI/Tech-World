@@ -42,11 +42,12 @@ userRoute.post("/login", async (req, res) => {
     const { email, password } = req.body;
     try {
         const user = await UserModel.find({ email });
+        //console.log(user.firstname)
         if (user.length > 0) {
             bcrypt.compare(password, user[0].password, (err, result) => {
                 if (result) {
                     let token = jwt.sign({ userID: user[0]._id }, 'key');
-                    res.send({ "message": "Login done", "token": token })
+                    res.send({ "message": "Login done", "token": token ,"name":user[0].firstname})
                 }
                 else {
                     res.send({ "message": "wrong credentials" })

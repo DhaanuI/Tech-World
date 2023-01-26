@@ -178,6 +178,101 @@
         button{
             cursor:pointer
         }
+
+        #toolshover>p,
+        #channelshover>p {
+            position: relative;
+
+        }
+
+        #toolshover>p::before,
+        #channelshover>p::before {
+            content: "";
+            position: absolute;
+            top: 150%;
+            width: 0%;
+            margin: auto;
+            height: 3px;
+            background-color: rgb(44, 124, 255);
+
+        }
+
+        #toolshover>p:hover::before,
+        #channelshover>p:hover::before {
+            width: 100%;
+        }
+
+        #toolshover>p:hover,
+        #channelshover>p:hover {
+            color: rgb(44, 124, 255);
+        }
+
+
+
+        #toolshover,
+        #channelshover {
+            cursor: pointer;
+
+        }
+
+        #dropdowntools,
+        #dropdownchannels {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+            padding: 20px 10px 10px 10px;
+
+        }
+
+        #dropdowntools>div,
+        #dropdownchannels>div {
+            float: none;
+            color: black;
+            padding: 0px 30px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            border-radius: 5px;
+
+        }
+
+        #dropdowntools>div:hover,
+        #dropdownchannels>div:hover {
+            background-color: rgb(236, 232, 232);
+            border-radius: 10px;
+        }
+
+        #toolshover:hover #dropdowntools,
+        #channelshover:hover #dropdownchannels {
+            display: block;
+
+
+        }
+
+        #dropdowntools p,
+        #dropdownchannels p {
+            margin-top: -10px
+        }
+
+        #toolshover {
+            margin-right: 30px
+        }
+        #toolshover button{
+            width:90%;
+            color:rgb(0,118,206);
+            margin-bottom:10px;
+            height:30px;
+            margin-left:18px
+            
+
+        }
+        button{
+            cursor:pointer
+        }
     </style>
 </head>
 
@@ -189,9 +284,27 @@
         <input id="input" type="text" placeholder="Search Tech_World">
 
         <div id="options">
-            <div>
+            <div id="toolshover">
                 <img src="https://img.icons8.com/puffy/2x/experimental-user-puffy.png" alt="signin">
-                <h5>Sign In</h5>
+                <h5 id="signin">Sign In</h5>
+                <div style="margin-top:40px" id="dropdowntools">
+                    <h3 style="margin-top:-10px">Welcome to Tech World</h3>
+                    <p>My Account</p>
+                    <ul>
+                        <li>Place orders quickly and easily</li>
+                        <li>View orders and track your shipping status </li>
+                        <li>Create and access a list of your products</li>
+                    </ul>
+
+                    <!-- <button style="background-color:rgb(0,118,206);color:white;border:0px">Sign In</button> <br> -->
+                    <button style="cursor:pointer;background-color:rgb(0,118,206);color:white;border:0px"><a style="text-decoration: none;color:white"
+                        href="./signin.html">Sign In</a></button>
+                        <button style="cursor:pointer;color:rgb(0,118,206);border:1px"><a style="text-decoration: none;;"
+                            href="./signup.html">Create an account</a></button>
+                    <!-- <button>t</button><br> -->
+                    <button>Premier Sign In</button><br>
+                    <button>Partner Program</button><br>
+                </div>
             </div>
             <div>
                 <img src="https://cdn-icons-png.flaticon.com/128/810/810350.png" alt="contact">
