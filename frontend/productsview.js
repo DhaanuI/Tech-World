@@ -45,7 +45,7 @@ else if(name==null){
 
 
 
-let url = "http://localhost:4500/products/homelaptops"
+let url = "https://alive-plum-capybara.cyclic.app/products/homelaptops"
 async function fetchData() {
     try {
         let fetchedData = await fetch(

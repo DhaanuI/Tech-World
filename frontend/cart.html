@@ -720,7 +720,7 @@
 
     async function fetchData() {
         try {
-            let fetchedData = await fetch("http://localhost:4500/cart/", {
+            let fetchedData = await fetch("https://alive-plum-capybara.cyclic.app/cart/", {
                 method: "GET",
                 headers: {
                     Authorization: `${localStorage.getItem("token")}`
@@ -806,7 +806,7 @@
         console.log("working")
         console.log(index)
         try {
-            let fetchedData = await fetch(`http://localhost:4500/cart/delete/${index}`, {
+            let fetchedData = await fetch(`https://alive-plum-capybara.cyclic.app/cart/delete/${index}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `${localStorage.getItem("token")}`

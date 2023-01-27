@@ -9,7 +9,7 @@ Tech Stacks used:
 HTML 5, CSS, Vanilla JavaScript for FrontEnd
 Node JS, Mongo DB and Express for Backend
 
-Cloned website has functionalities like 
+Website has functionalities like 
 Login/Signup (Database connected), 
 Fetching Data from Backend API, 
-token based verifying Login and Sorting & Filtering.
+Token based verifying Login and Sorting & Filtering the fetched data.
