@@ -1,6 +1,6 @@
 # illegal-pencil-7993
 
-Clone of Dell.com
+Clone of [Dell.com](https://snazzy-gelato-c02112.netlify.app/)
 
 ![image](https://user-images.githubusercontent.com/112754832/214644853-f5f18f96-af37-4580-afef-905d6390368f.png)
 
