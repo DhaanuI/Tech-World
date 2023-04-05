@@ -24,3 +24,6 @@
 Website has functionalities like  Login/Signup (Database connected), 
 Fetching Data from Backend API, 
 Token based verifying Login and Sorting & Filtering the fetched data.
+
+### Backend deployed link - https://alive-plum-capybara.cyclic.app/
+### Frontend deployed link - https://snazzy-gelato-c02112.netlify.app
