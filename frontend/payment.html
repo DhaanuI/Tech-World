@@ -5,8 +5,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech World - Laptops, Desktops and Much more</title>
+    <title>Payments</title>
+
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color: #f1f1f1; */
+        }
+
+        .container {
+            background-color: #f1f1f1;
+            ;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin: 50px auto;
+            max-width: 500px;
+            padding: 20px;
+            margin-top: -30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card {
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 3px;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
         body {
             margin: 0px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -436,263 +506,51 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <h1>Tech World - Payment Form</h1>
+        <form>
+            <label for="cardname">Name on Card</label>
+            <input type="text" id="cardname" name="cardname" placeholder="Dhaanu I">
 
-    <div id="navbar_icons">
-        <div id="toolshover">
-            <p>APEX</p>
-            <div id="dropdowntools">
-                <p>View All APEX</p>
-                <p>Compute & HCl</p>
+            <label for="cardnumber">Card Number</label>
+            <input type="number" id="cardnumber" name="cardnumber" placeholder="Your Card 16 digit number">
 
+            <label for="expmonth">Expiration Month</label>
+            <select id="expmonth" name="expmonth">
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
 
-                <p>Storage</p>
+            <label for="expyear">Expiration Year</label>
+            <input type="number" id="expyear" name="expyear" placeholder="2023">
+            <label for="cvv">CVV</label>
+            <input type="number" id="cvv" name="cvv" placeholder="123">
 
-                <p>Cyber and data protection</p>
-
-                <p>create a custom solution</p>
+            <div class="card">
+                <h3>Order Summary</h3>
+                <p id="totalprice"></p>
             </div>
-        </div>
-
-        <div id="toolshover">
-            <p>Products</p>
-            <div id="dropdowntools">
-                <p>Laptops</p>
-                <p>desktops and all in ones</p>
-
-
-                <p>gaming</p>
-
-                <p>workstations</p>
-
-                <p>servers</p>
-            </div>
-        </div>
-
-        <div id="toolshover">
-            <p>Solutions</p>
-            <div id="dropdowntools">
-                <p>Laptops</p>
-                <p>desktops and all in ones</p>
-
-
-                <p>gaming</p>
-
-                <p>workstations</p>
-
-                <p>servers</p>
-            </div>
-        </div>
-
-        <div id="toolshover">
-            <p>Services</p>
-            <div id="dropdowntools">
-                <p>Laptops</p>
-                <p>desktops and all in ones</p>
-
-
-                <p>gaming</p>
-
-                <p>workstations</p>
-
-                <p>servers</p>
-            </div>
-        </div>
-
-        <div id="toolshover">
-            <p>Support</p>
-            <div id="dropdowntools">
-                <p>Laptops</p>
-                <p>desktops and all in ones</p>
-
-
-                <p>gaming</p>
-
-                <p>workstations</p>
-
-                <p>servers</p>
-            </div>
-        </div>
-        <div id="toolshover">
-            <p>Deals</p>
-            <div id="dropdowntools">
-                <p>Laptops</p>
-                <p>desktops and all in ones</p>
-
-
-                <p>gaming</p>
-
-                <p>workstations</p>
-
-                <p>servers</p>
-            </div>
-        </div>
-
-        <div id="toolshover">
-            <p>Find a store</p>
-            <div id="dropdowntools">
-                <p>Laptops</p>
-                <p>desktops and all in ones</p>
-
-
-                <p>gaming</p>
-
-                <p>workstations</p>
-
-                <p>servers</p>
-            </div>
-        </div>
-
-        <div id="toolshover">
-            <p>About Us</p>
-            <div id="dropdowntools">
-                <p>Laptops</p>
-                <p>desktops and all in ones</p>
-
-
-                <p>gaming</p>
-
-                <p>workstations</p>
-
-                <p>servers</p>
-            </div>
-        </div>
-    </div>
-
-
-
-    <h2 id="heading">Cart Page</h2>
-    <hr>
-    <div id="mainbox">
-        <div id="box1">
-
-        </div>
-        <div id="coupon">
-            <h3>Coupons</h3>
-            <div stle="display:flex">
-                <input type="text">
-                <button style="margin-left:-10px">Apply Coupon</button>
-
-            </div>
-            <p>Chat with an agent or Call 1800-425-4002 for additional help.</p>
-            <div>
-                <h4></h4>
-                <p id="quantity"></p>
-
-                <p id="totalvalue"></p>
-
-                <p>Above prices include Tax and Shipping</p>
-                <!-- <hr> -->
-
-                <button style="background-color:rgb(79,125,0);color:white;border:0px;" id="checkout">Checkout</button>
-                <br>
-                <!-- <hr> -->
-
-                <button id="continue">Continue Shopping</button>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div id="footer">
-        <div id="foot1">
-            <div>
-                <img src="data:image/png;base64,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"
-                    alt="globe">
-                <h5>IN/EN</h5>
-                <p>Site Map</p>
-
-            </div>
-            <div>
-                <h4>Account</h4>
-                <p>My Account</p>
-                <p>Order Status</p>
-                <p>My Products</p>
-            </div>
-            <div>
-                <h4>Support</h4>
-                <p>Support Home</p>
-                <p>Contact Support</p>
-            </div>
-            <div>
-                <h4>Connect with Us</h4>
-                <p>Community</p>
-                <p>Contact Us</p>
-            </div>
-        </div>
-
-        <div id="foot1">
-            <div>
-                <h4>Our Offerings</h4>
-                <p>APEX</p>
-                <p>Products</p>
-                <p>Solutions</p>
-                <p>Services</p>
-
-            </div>
-            <div>
-                <h4>Our Company</h4>
-                <p>Who We Are</p>
-                <p>Careers</p>
-                <p>Tech World Capital</p>
-                <p>Investors</p>
-                <p>Newsroom</p>
-                <p>Perspectives</p>
-                <p>Recycling</p>
-                <p>ESG & Impact</p>
-            </div>
-            <div>
-                <h4>Our Partners</h4>
-                <p>Find a Partner</p>
-                <p>OEM Solutions</p>
-                <p>Partner Program</p>
-            </div>
-            <div>
-                <h4>Resources</h4>
-                <p>Blog</p>
-                <p>Events</p>
-                <p>Dell Learning Centre</p>
-                <p>Glossary</p>
-                <p>Privacy Centre</p>
-                <p>Resource Library</p>
-                <p>Trial Software Downloads</p>
-            </div>
-        </div>
-
-        <div>
-            <div id="foot2">
-                <p style="margin-left:30px;font-weight:bold">Tech World.com</p>
-                <p style="font-weight:bold">Tech World Technologies</p>
-                <p style="font-weight:bold">Premier</p>
-            </div>
-
-            <div id="foot2" style="margin-bottom:40px">
-                <p style="margin-left:30px">Copyright © 2023 Dell Inc.</p>
-                <p>Terms of Sale</p>
-                <p>Privacy Statement</p>
-                <p>Legal & Regulatory</p>
-                <p>Accessibility</p>
-            </div>
-        </div>
-
+            <button type="button" onclick="makePayment()">Make Payment</button>
+        </form>
     </div>
 </body>
 
 </html>
 
 <script>
+
     let name = localStorage.getItem("username");
-    console.log(name)
-
-    document.getElementById("checkout").addEventListener("click", () => {
-        localStorage.setItem("total", document.getElementById("totalvalue").innerText);
-        window.location.href = "./payment.html"
-        
-    })
-
     if (name) {
-
         document.getElementById("signin").innerText = name;
 
         document.getElementById("dropdowntools").innerHTML = "";
@@ -710,179 +568,53 @@
             document.getElementById("signin").innerText = "Sign In";
             window.location.href = "./index.html"
             document.getElementById("dropdowntools").innerHTML = `<h3 style="margin-top:-10px">Welcome to Tech World</h3>
-                    <p>My Account</p>
-                    <ul>
-                        <li>Place orders quickly and easily</li>
-                        <li>View orders and track your shipping status </li>
-                        <li>Create and access a list of your products</li>
-                    </ul>
+            <p>My Account</p>
+            <ul>
+                <li>Place orders quickly and easily</li>
+                <li>View orders and track your shipping status </li>
+                <li>Create and access a list of your products</li>
+            </ul>
 
-                    <!-- <button style="background-color:rgb(0,118,206);color:white;border:0px">Sign In</button> <br> -->
-                    <button style="cursor:pointer;background-color:rgb(0,118,206);color:white;border:0px"><a style="text-decoration: none;color:white"
-                        href="./signin.html">Sign In</a></button>
-                        <button style="cursor:pointer;color:rgb(0,118,206);border:1px"><a style="text-decoration: none;;"
-                            href="./signup.html">Create an account</a></button>
-                    <!-- <button>t</button><br> -->
-                    <button>Premier Sign In</button><br>
-                    <button>Partner Program</button><br>
-    `
-
+            <!-- <button style="background-color:rgb(0,118,206);color:white;border:0px">Sign In</button> <br> -->
+            <button style="cursor:pointer;background-color:rgb(0,118,206);color:white;border:0px"><a style="text-decoration: none;color:white"
+                href="./signin.html">Sign In</a></button>
+                <button style="cursor:pointer;color:rgb(0,118,206);border:1px"><a style="text-decoration: none;;"
+                    href="./signup.html">Create an account</a></button>
+            <!-- <button>t</button><br> -->
+            <button>Premier Sign In</button><br>
+            <button>Partner Program</button><br>
+`
         })
-
     }
 
     else if (name == null) {
         document.getElementById("signin").innerText = "Sign In";
     }
 
-    async function fetchData() {
-        try {
-            let fetchedData = await fetch("https://alive-plum-capybara.cyclic.app/cart/", {
-                method: "GET",
-                headers: {
-                    Authorization: `${localStorage.getItem("token")}`
-                }
-            });
-            let data = await fetchedData.json();
-            console.log(data)
-            display(data)
+    let total = localStorage.getItem("total");
 
+    document.getElementById("totalprice").innerText = total
+    function makePayment() {
+        let cardName = document.getElementById("cardname").value;
+        let cardNumber = document.getElementById("cardnumber").value;
+        let expMonth = document.getElementById("expmonth").value;
+        let expYear = document.getElementById("expyear").value;
+        let cvv = document.getElementById("cvv").value;
+
+        if (cardName === "" || cardNumber === "" || expMonth === "" || expYear === "" || cvv === "") {
+            alert("Please fill in all fields");
+            return;
         }
 
-        catch (err) {
-            alert("No items at Cart");
+        let sum = 0;
+        let numDigits = cardNumber.length;
+
+        if (numDigits != 16) {
+            alert("Invalid card number");
+            return;
         }
+
+        alert("Payment is done");
+        window.location.href = "./index.html"
     }
-    fetchData();
-
-
-    //let cartarr = JSON.parse(localStorage.getItem("cart")) || []
-
-    let quan = 0
-    let total = 0
-
-    function display(data) {
-
-        document.querySelector("#box1").innerHTML = ""
-
-        data.forEach((data, index) => {
-
-            let div = document.createElement("div")
-            div.setAttribute("id", data._id)
-
-            let div1 = document.createElement("div")
-            div1.setAttribute("id", "imagebox")
-
-            let image = document.createElement("img")
-            image.setAttribute("src", data.image)
-            div1.append(image)
-
-
-            let div2 = document.createElement("div")
-            div2.setAttribute("id", "infobox")
-
-            let title = document.createElement("h4")
-            title.innerText = data.title;
-
-            let edit = document.createElement("button")
-            edit.innerText = "Remove";
-            edit.setAttribute("id", "remove")
-            edit.setAttribute("onclick", `clickme("${data._id}")`)
-
-            let save = document.createElement("p")
-            save.innerText = "Save for Later";
-
-            let div3 = document.createElement("div")
-            div3.setAttribute("id", "buttons")
-
-            let plus = document.createElement("button")
-            plus.setAttribute("class", "plus")
-            plus.innerText = "+"
-
-            let quants = document.createElement("p")
-            quants.innerText = 1;
-
-            let minus = document.createElement("button")
-            minus.setAttribute("class", "minus")
-            minus.innerText = "-"
-
-
-            plus.addEventListener("click", () => {
-                quants.innerText = parseInt(quants.innerText) + 1;
-
-
-                quan = parseInt(quants.innerText);
-
-                total = quan * (parseInt(data.price))
-                document.getElementById("quantity").innerText = "Items:" + " " + quan
-                document.getElementById("totalvalue").innerText = "Total Order Value:" + " " + "₹" + total
-            });
-
-            minus.addEventListener("click", () => {
-                if (quants.innerText > 1) {
-                    quants.innerText = parseInt(quants.innerText) - 1;
-
-                    quan = parseInt(quants.innerText);
-                    total = quan * (parseInt(data.price))
-                    document.getElementById("quantity").innerText = "Items:" + " " + quan
-                    document.getElementById("totalvalue").innerText = "Total Order Value:" + " " + "₹" + total
-                }
-            });
-
-            let div4 = document.createElement("div")
-            div4.setAttribute("id", "price")
-
-            let price = document.createElement("h5")
-            price.innerText = parseInt(data.price)
-
-            quan = quan + parseInt(quants.innerText);
-            total = total + parseInt(data.price);
-
-            div4.append(price)
-            div3.append(plus, quants, minus)
-
-            div2.append(title, edit, save)
-            div.append(div1, div2, div3, div4)
-
-            document.querySelector("#box1").append(div)
-
-
-
-            console.log(quan, total)
-            document.getElementById("quantity").innerText = "Items:" + " " + quan
-            document.getElementById("totalvalue").innerText = "Total Order Value:" + " " + "₹" + total
-
-        })
-    }
-
-
-    async function clickme(index) {
-        console.log("working")
-        console.log(index)
-        try {
-            let fetchedData = await fetch(`https://alive-plum-capybara.cyclic.app/cart/delete/${index}`, {
-                method: "DELETE",
-                headers: {
-                    Authorization: `${localStorage.getItem("token")}`
-                }
-            });
-
-            fetchData()
-
-
-        }
-
-        catch (err) {
-            alert("something went wrong");
-        }
-
-
-        // document.getElementById("quantity").innerText = "Items:" + " " + 1
-        // document.getElementById("totalvalue").innerText = "Total Order Value:" + " " + "₹" + 123988
-    }
-
-
-
-
-
 </script>

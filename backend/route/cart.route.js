@@ -35,6 +35,7 @@ cartRoute.get('/', async (req, res) => {
     let userID = jwt.verify(req.headers.authorization, "key");
     try {
         let productIds = await CartModel.find({ userID: userID.userID });
+        console.log(productIds)
         if (productIds.length) {
             let products = [];
             for (let i of productIds) {
