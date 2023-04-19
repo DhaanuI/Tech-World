@@ -1,23 +1,25 @@
-let name=localStorage.getItem("username");
-    console.log(name)
+let baseURL = "https://alive-plum-capybara.cyclic.app/"
 
-    if(name)
-    {
-        
-document.getElementById("signin").innerText=name;
 
-document.getElementById("dropdowntools").innerHTML="";
+let name = localStorage.getItem("username");
 
-let button=document.createElement("button")
-button.innerText="Log Out"
-document.getElementById("dropdowntools").append(button)
 
-button.addEventListener("click",()=>{
-    localStorage.removeItem("username");
-    window.location.href="./index.html"
+if (name) {
 
-    document.getElementById("signin").innerText="Sign In";
-    document.getElementById("dropdowntools").innerHTML=`<h3 style="margin-top:-10px">Welcome to Tech World</h3>
+    document.getElementById("signin").innerText = name;
+
+    document.getElementById("dropdowntools").innerHTML = "";
+
+    let button = document.createElement("button")
+    button.innerText = "Log Out"
+    document.getElementById("dropdowntools").append(button)
+
+    button.addEventListener("click", () => {
+        localStorage.removeItem("username");
+        window.location.href = "./index.html"
+
+        document.getElementById("signin").innerText = "Sign In";
+        document.getElementById("dropdowntools").innerHTML = `<h3 style="margin-top:-10px">Welcome to Tech World</h3>
                     <p>My Account</p>
                     <ul>
                         <li>Place orders quickly and easily</li>
@@ -35,24 +37,23 @@ button.addEventListener("click",()=>{
                     <button>Partner Program</button><br>
     `
 
-})
+    })
 
 }
 
-else if(name==null){
-    document.getElementById("signin").innerText="Sign In";
+else if (name == null) {
+    document.getElementById("signin").innerText = "Sign In";
 }
 
 
 
-let url = "https://alive-plum-capybara.cyclic.app/products/homelaptops"
+let url = `${baseURL}products/homelaptops`
 async function fetchData() {
     try {
         let fetchedData = await fetch(
-            "https://alive-plum-capybara.cyclic.app/products/homelaptops/inspiron"
+            `${baseURL}products/homelaptops/inspiron`
         );
         let data = await fetchedData.json();
-        //console.log(data)
         display(data)
         document.querySelector("#sorting").addEventListener("change", function () {
             let selected = document.querySelector("#sorting").value;
@@ -71,7 +72,6 @@ async function fetchData() {
             }
             else display(data)
         })
-        //display(data);
     } catch (err) {
         alert("something went wrong");
     }
@@ -86,7 +86,6 @@ function display(data) {
 
         let div = document.createElement("div");
         div.setAttribute("id", index)
-        //div.setAttribute("onclick",clickme())
         let imagediv = document.createElement("div");
         let pricediv = document.createElement("div");
         let off = document.createElement("p");
@@ -106,7 +105,6 @@ function display(data) {
         let image = document.createElement("img");
         image.setAttribute("src", elem.image);
         image.setAttribute("id", elem._id);
-        // image.setAttribute("id", "product"+i+"image");
 
         let infodiv = document.createElement("div");
         let title = document.createElement("h3");
@@ -142,7 +140,6 @@ function display(data) {
         pricediv.append(off, online, price, dat, del, e)
 
         let div1 = document.createElement("div");
-        //div1.setAttribute("id", elem._id)
         div1.append(div)
         document.querySelector("#render").append(div1)
 
@@ -159,13 +156,13 @@ function display(data) {
 
 
     let fun = document.querySelectorAll("#render>div");
-    
-    arr=[1]
+
+    arr = [1]
     for (let i = 0; i < fun.length; i++) {
         fun[i].addEventListener("click", function (e) {
-            
-            
-            
+
+
+
             image = document.querySelector("#product" + i + ">div>div>img").src;
             title = document.querySelector("#product" + i + " h3").innerText
             price = document.querySelector("#product" + i + "price").innerText
@@ -175,31 +172,28 @@ function display(data) {
             os = document.querySelector("#product" + i + "os").innerText
             storage = document.querySelector("#product" + i + "storage").innerText
             graphics = document.querySelector("#product" + i + "graphics").innerText
-            quantity=1;
-            userID=e.target.id
+            quantity = 1;
+            userID = e.target.id
 
-            // console.log(image)
-            // console.log(name)
-            // console.log(price, online, processor, memory, os, storage, graphics)
-            let clickedobj={
+            let clickedobj = {
                 image,
                 title,
                 price,
-                online, 
-                processor, 
-                memory, 
-                os, 
-                storage, 
+                online,
+                processor,
+                memory,
+                os,
+                storage,
                 graphics,
                 quantity,
                 userID
             }
 
-arr[0]=clickedobj
+            arr[0] = clickedobj
 
-localStorage.setItem("clicked",JSON.stringify(arr))
+            localStorage.setItem("clicked", JSON.stringify(arr))
 
-window.location.href="./selectedproduct.html"
+            window.location.href = "./selectedproduct.html"
 
         });
     }
@@ -217,7 +211,7 @@ function homechecked() {
         async function fetchData() {
             try {
                 let fetchedData = await fetch(
-                    "https://alive-plum-capybara.cyclic.app/products/homelaptops/"
+                    "http://localhost:4500/cart/products/homelaptops/"
                 );
                 let data = await fetchedData.json();
                 console.log(data)
@@ -236,7 +230,7 @@ function businesschecked() {
         async function fetchData() {
             try {
                 let fetchedData = await fetch(
-                    "https://alive-plum-capybara.cyclic.app/products/businesslaptops/"
+                    "http://localhost:4500/products/businesslaptops/"
                 );
                 let data = await fetchedData.json();
                 console.log(data)
@@ -255,7 +249,7 @@ function inspironchecked() {
         async function fetchData() {
             try {
                 let fetchedData = await fetch(
-                    "https://alive-plum-capybara.cyclic.app/products/homelaptops/inspiron"
+                    "http://localhost:4500/products/homelaptops/inspiron"
                 );
                 let data = await fetchedData.json();
                 console.log(data)
@@ -274,7 +268,7 @@ function vostrochecked() {
         async function fetchData() {
             try {
                 let fetchedData = await fetch(
-                    "https://alive-plum-capybara.cyclic.app/products/homelaptops/vostro"
+                    "http://localhost:4500/products/homelaptops/vostro"
                 );
                 let data = await fetchedData.json();
                 console.log(data)
@@ -293,7 +287,7 @@ function xpschecked() {
         async function fetchData() {
             try {
                 let fetchedData = await fetch(
-                    "https://alive-plum-capybara.cyclic.app/products/homelaptops/xps"
+                    "http://localhost:4500/products/homelaptops/xps"
                 );
                 let data = await fetchedData.json();
                 console.log(data)

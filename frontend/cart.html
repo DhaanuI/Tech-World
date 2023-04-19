@@ -682,13 +682,14 @@
 </html>
 
 <script>
+
+    let baseURL = "https://alive-plum-capybara.cyclic.app/"
     let name = localStorage.getItem("username");
-    console.log(name)
 
     document.getElementById("checkout").addEventListener("click", () => {
         localStorage.setItem("total", document.getElementById("totalvalue").innerText);
         window.location.href = "./payment.html"
-        
+
     })
 
     if (name) {
@@ -737,7 +738,7 @@
 
     async function fetchData() {
         try {
-            let fetchedData = await fetch("https://alive-plum-capybara.cyclic.app/cart/", {
+            let fetchedData = await fetch(`${baseURL}/cart`, {
                 method: "GET",
                 headers: {
                     Authorization: `${localStorage.getItem("token")}`
@@ -754,9 +755,6 @@
         }
     }
     fetchData();
-
-
-    //let cartarr = JSON.parse(localStorage.getItem("cart")) || []
 
     let quan = 0
     let total = 0
@@ -846,9 +844,6 @@
 
             document.querySelector("#box1").append(div)
 
-
-
-            console.log(quan, total)
             document.getElementById("quantity").innerText = "Items:" + " " + quan
             document.getElementById("totalvalue").innerText = "Total Order Value:" + " " + "₹" + total
 
@@ -857,28 +852,19 @@
 
 
     async function clickme(index) {
-        console.log("working")
-        console.log(index)
         try {
-            let fetchedData = await fetch(`https://alive-plum-capybara.cyclic.app/cart/delete/${index}`, {
+            let fetchedData = await fetch(`${baseURL}cart/delete/${index}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `${localStorage.getItem("token")}`
                 }
             });
-
             fetchData()
-
-
         }
 
         catch (err) {
             alert("something went wrong");
         }
-
-
-        // document.getElementById("quantity").innerText = "Items:" + " " + 1
-        // document.getElementById("totalvalue").innerText = "Total Order Value:" + " " + "₹" + 123988
     }
 
 

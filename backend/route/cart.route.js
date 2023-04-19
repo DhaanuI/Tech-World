@@ -33,9 +33,11 @@ cartRoute.post('/:productID', async (req, res) => {
 
 cartRoute.get('/', async (req, res) => {
     let userID = jwt.verify(req.headers.authorization, "key");
+    console.log(userID.userID)
     try {
         let productIds = await CartModel.find({ userID: userID.userID });
         console.log(productIds)
+        console.log(productIds[0].userID)
         if (productIds.length) {
             let products = [];
             for (let i of productIds) {
@@ -57,19 +59,16 @@ cartRoute.get('/', async (req, res) => {
 cartRoute.delete('/delete/:id', async (req, res) => {
     let ID = req.params.id;
 
-    const data = await CartModel.find({ productID: ID });
+    const data = await CartModel.findOne({ productID: ID });
     let token = req.headers.authorization
     let userID = jwt.verify(token, "key");
-    const userid_in_doc = data[0].userID
+
 
     try {
-        if (userID.userID !== userid_in_doc) {
-            res.send({ "message": "you arenot authorised" })
-        }
-        else {
-            await CartModel.findOneAndDelete({ productID: ID })
-            res.send("Particular data has been deleted")
-        }
+
+        await CartModel.findOneAndDelete({ productID: ID })
+        res.send("Particular data has been deleted")
+
     }
     catch (err) {
         console.log(err)

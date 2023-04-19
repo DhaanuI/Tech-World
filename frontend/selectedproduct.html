@@ -629,8 +629,8 @@
 
 <script>
 
+    let baseURL = "https://alive-plum-capybara.cyclic.app/"
     let name = localStorage.getItem("username");
-    console.log(name)
 
     if (name) {
 
@@ -676,7 +676,7 @@
 
 
     let arr = JSON.parse(localStorage.getItem("clicked"))
-    console.log(arr)
+
     let cartarr = JSON.parse(localStorage.getItem("cart")) || []
     arr.forEach((data, index) => {
         document.getElementById("title").innerText = data.title;
@@ -742,10 +742,7 @@
         osinfo.innerText = data.os
 
         document.querySelector("#graph").append(osinfo)
-
-
         document.querySelector("#showprice1").append(pricee)
-
 
     })
 
@@ -755,22 +752,17 @@
 
 
     async function clickme() {
-
-        // let obj={
-        //     productID:arr[0].userID
-        // }
         console.log(arr[0].userID)
         try {
-            let res=await fetch(`https://alive-plum-capybara.cyclic.app/cart/${arr[0].userID}`,{
-                method:"POST",
-                headers : {
-				"Content-Type" : "application/json",
-                Authorization: `${localStorage.getItem("token")}`
-            }
-                // body:JSON.stringify(obj)
+            let res = await fetch(`${baseURL}cart/${arr[0].userID}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `${localStorage.getItem("token")}`
+                }
             })
             alert("Item added to cart")
-             window.location.href = "./cart.html"
+            window.location.href = "./cart.html"
 
         }
         catch (err) {
@@ -778,7 +770,7 @@
         }
 
 
-        
+
     }
 
 

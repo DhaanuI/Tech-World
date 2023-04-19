@@ -1,48 +1,41 @@
 
-function gotoinspiron()
-{
-    window.location.href="./productsview.html"
+function gotoinspiron() {
+    window.location.href = "./productsview.html"
 }
 
-function gotovostro()
-{
-    window.location.href="./vostroview.html"
+function gotovostro() {
+    window.location.href = "./vostroview.html"
 }
 
-function gotogseries()
-{
-    window.location.href="./gseriesview.html"
+function gotogseries() {
+    window.location.href = "./gseriesview.html"
 }
 
-function gotoalienware()
-{
-    window.location.href="./alienwareview.html"
+function gotoalienware() {
+    window.location.href = "./alienwareview.html"
 }
 
-function gotoxps()
-{
-    window.location.href="./xpsview.html"
+function gotoxps() {
+    window.location.href = "./xpsview.html"
 }
 
-let name=localStorage.getItem("username");
-console.log(name)
+let name = localStorage.getItem("username");
 
-if(name)
-{
-    
-document.getElementById("signin").innerText=name;
+if (name) {
 
-document.getElementById("dropdowntools").innerHTML="";
+    document.getElementById("signin").innerText = name;
 
-let button=document.createElement("button")
-button.innerText="Log Out"
-document.getElementById("dropdowntools").append(button)
+    document.getElementById("dropdowntools").innerHTML = "";
 
-button.addEventListener("click",()=>{
-localStorage.removeItem("username");
+    let button = document.createElement("button")
+    button.innerText = "Log Out"
+    document.getElementById("dropdowntools").append(button)
 
-document.getElementById("signin").innerText="Sign In";
-document.getElementById("dropdowntools").innerHTML=`<h3 style="margin-top:-10px">Welcome to Tech World</h3>
+    button.addEventListener("click", () => {
+        localStorage.removeItem("username");
+
+        document.getElementById("signin").innerText = "Sign In";
+        document.getElementById("dropdowntools").innerHTML = `<h3 style="margin-top:-10px">Welcome to Tech World</h3>
                 <p>My Account</p>
                 <ul>
                     <li>Place orders quickly and easily</li>
@@ -60,12 +53,12 @@ document.getElementById("dropdowntools").innerHTML=`<h3 style="margin-top:-10px"
                 <button>Partner Program</button><br>
 `
 
-})
+    })
 
 }
 
-else if(name==null){
-document.getElementById("signin").innerText="Sign In";
+else if (name == null) {
+    document.getElementById("signin").innerText = "Sign In";
 }
 
 

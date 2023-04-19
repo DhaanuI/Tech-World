@@ -239,6 +239,8 @@
 
 <script>
 
+let baseURL = "https://alive-plum-capybara.cyclic.app/"
+
     document.getElementById("signin").addEventListener("click", signin)
 
     async function signin() {
@@ -250,7 +252,7 @@
             password: pass
         }
         try {
-            let res = await fetch("https://alive-plum-capybara.cyclic.app/users/login", {
+            let res = await fetch(`${baseURL}users/login`, {
                 method: "POST",
                 body: JSON.stringify(obj),
                 headers: {
@@ -269,8 +271,6 @@
             } else {
                 alert("User not found.");
             }
-
-            /// window.location.href="./index.html"
         }
         catch (err) {
             console.log(err)
