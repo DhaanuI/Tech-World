@@ -1,4 +1,4 @@
-# Clone of [Dell.com](https://dellprojecttest.netlify.app/)
+# Tech World - Clone of [Dell.com](https://dellprojecttest.netlify.app/)
 
 ## Landing Page
 ![image](https://user-images.githubusercontent.com/112754832/214644853-f5f18f96-af37-4580-afef-905d6390368f.png)
